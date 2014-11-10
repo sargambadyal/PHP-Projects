@@ -1,0 +1,110 @@
+Repeated fitness function evaluation for complex problems is often the most prohibitive and limiting segment of artificial evolutionary algorithms. Finding the optimal solution to complex high dimensional, multimodal problems often requires very expensive fitness function evaluations. In real world problems such as structural optimization problems, one single function evaluation may require several hours to several days of complete simulation.
+
+number of elements which are exposed to mutation is large there is often an exponential increase in search space size. This makes it extremely difficult to use the technique on problems such as designing an engine, a house or plane.
+
+The "better" solution is only in comparison to other solutions. As a result, the stop criterion is not clear in every problem.
+
+Operating on dynamic data sets is difficult, as genomes begin to converge early on towards solutions which may no longer be valid for later data. 
+----------------------------------------------------------------
+Today, testing is the most challenging and dominating activity used by industry,
+
+therefore, improvement in its effectiveness, both with respect to the time and resources, is
+
+taken as a major factor by many researchers.
+
+A new technique is presented for automatically generating test cases using genetic
+
+algorithms (GAs). This technique extends the random testing by the use of genetic
+
+algorithms
+
+Various factors are discovered that distinguishes a Test Suit (Set of test cases) from the
+
+other one on the basis of its goodness. A good test case is a test case whose chances of
+
+finding a bug are more.
+
+The factors discovered are used in evaluating the fitness function of GA for selecting the
+
+best possible Test Suit.
+
+This technique takes the program as an input and then evaluates the test cases for that
+
+program. That is, it is a white box testing technique. Complete methodology and its
+
+effectiveness have been demonstrated with the help of suitable example.
+
+
+
+
+Software testing takes a considerable amount of time and resources spent
+on producing software. Therefore, it would be useful to have ways to reduce the
+cost of software testing. The new concepts of spanning sets of entities suggested by
+Marr´ and Bertolino are useful for reducing the cost of testing. In fact, to reduce
+e
+the testing e?ort, the generation of test data can be targeted to cover the entities
+
+in the spanning set, rather than all the entities in the tested program. Marr´
+e
+and Bertolino presented an algorithm based on the subsumption relation between
+entities to ?nd spanning sets for a family of control ?ow and data ?ow-based test
+coverage criteria. This paper presents a new general technique for the automatic test
+data generation for spanning sets coverage. The proposed technique applies to the
+algorithm proposed recently by Marr´ and Bertolino to automatically generate the
+e
+spanning sets of program entities that satisfy a wide range of control ?ow and data
+?ow-based test coverage criteria. Then, it uses a genetic algorithm to automatically
+generate sets of test data to cover these spanning sets. The proposed technique
+employed the concepts of spanning sets to limit the number of test cases, guide the
+test case selection, overcome the problem of the redundant test cases and automate
+the test path generation.
+
+
+
+
+Genetic algorithms are often used for optimization problems in which the evolution of a
+population is a search for a satisfactory solution given a set of constraints. We have reported
+preliminary results from an experiment comparing random test data generation with a new
+approach using genetic search. In this paper we have demonstrated that it is possible to apply
+Genetic Algorithm techniques for finding the most critical paths for improving software
+testing efficiency. The Genetic Algorithms also outperforms the exhaustive search and local
+search techniques. In conclusion, by examining the most critical paths first, we obtain a more
+effective way to approach testing which in turn helps to refine effort and cost estimation in
+the testing phase. Our experiments conducted so far are based on relatively small examples
+and more research needs to be conducted with larger commercial examples. Future research
+will involve comparing GA selected paths in larger test data and further refining the method
+presented. This research would help in generating various software test cases. Also, since GA
+can be used independently for any problem and it is an emerging field so it has tremendous
+importance for users.
+
+
+
+This paper presents a method for optimizing software testing efficiency by identifying the
+most critical path clusters in a program. We do this by developing variable length Genetic
+Algorithms that optimize and select the software path clusters which are weighted in
+accordance with the criticality of the path. Exhaustive software testing is rarely possible
+because it becomes intractable for even medium sized software. Typically only parts of a
+program can be tested, but these parts are not necessarily the most error prone. Therefore,
+we are developing a more selective approach to testing by focusing on those parts that are
+most critical so that these paths can be tested first. By identifying the most critical paths, the
+testing efficiency can be increased.
+
+-------------------------------------------------------------------------------------
+Abstract: software testing is very important issue when software design is conisdered. A huge amount of money is spent to compensate for the errors occcuring in the software where no proper software testing is involved. There are various types of software testing techniques and domains that we require for effective development of a project. thus envolvement of genic algo into software testing seems to be a solution but it also has certain drawbacks like it take stoo many test cases, and is a long process, and is very expensive. by incorporating various test techniques in the software engineering process the software testing can be made easy. like by incorporating white box testing with the alpha testing and safety testing and black box testing with scalability and performance and compatability testing. this the aim of this paper to to find the effective combinations of the various software testing techniquies and finally deriving a numerical percentage of each testing to be employed in each part of the software design and development.
+
+Also, using the hamiltonian and spanning tree concepts to find for the test proof and completelness test for the software to avoid and bugs or errors. and finding ways to incorporate these concepts to make the software testing more easy and of less cost.
+
+uses of genetic algorithms: 1. genetic learning ie test cases are automatically generated and check for the bugs. various steps diagram.
+
+with the help of mutations we can do white testing better.
+
+checking for the right combination for functional and non functional testing
+
+
+finding our oun way to purify the input specifically user requirements are met or not using hamiltonian graph concept. which can be also enployed for testing each line or condition of code is run once or not to check white box. also mployed for each module of functionality.
+
+sinple architecture for the software tester to ensure testing.
+
+idea: if we can do prototyping then when mot testing with every phase...
+
+to check different components why software testing at the completion og the code. this saves a lot of money.

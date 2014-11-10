@@ -1,0 +1,61 @@
+Installing Apache HTTP 2.0 server with
+ DomainName =    example.com
+ ServerName =    www.example.com
+ ServerAdmin =   admin@example.com
+ ServerPort =    80
+ ServerSslPort = 80
+ ServerRoot =    /httpd-2.2-x64
+Rewrote docs/conf/extra/httpd-autoindex.conf.in
+ to /httpd-2.2-x64/conf/original/extra/httpd-autoindex.conf
+Rewrote docs/conf/extra/httpd-vhosts.conf.in
+ to /httpd-2.2-x64/conf/original/extra/httpd-vhosts.conf
+Rewrote docs/conf/extra/httpd-default.conf.in
+ to /httpd-2.2-x64/conf/original/extra/httpd-default.conf
+Rewrote docs/conf/extra/httpd-manual.conf.in
+ to /httpd-2.2-x64/conf/original/extra/httpd-manual.conf
+Rewrote docs/conf/extra/httpd-mpm.conf.in
+ to /httpd-2.2-x64/conf/original/extra/httpd-mpm.conf
+Rewrote docs/conf/extra/httpd-info.conf.in
+ to /httpd-2.2-x64/conf/original/extra/httpd-info.conf
+Rewrote docs/conf/extra/httpd-dav.conf.in
+ to /httpd-2.2-x64/conf/original/extra/httpd-dav.conf
+Rewrote docs/conf/extra/httpd-languages.conf.in
+ to /httpd-2.2-x64/conf/original/extra/httpd-languages.conf
+Rewrote docs/conf/httpd.conf.in
+ to /httpd-2.2-x64/conf/original/httpd.conf
+Rewrote docs/conf/extra/httpd-userdir.conf.in
+ to /httpd-2.2-x64/conf/original/extra/httpd-userdir.conf
+Rewrote docs/conf/extra/httpd-ssl.conf.in
+ to /httpd-2.2-x64/conf/original/extra/httpd-ssl.conf
+Rewrote docs/conf/extra/httpd-multilang-errordoc.conf.in
+ to /httpd-2.2-x64/conf/original/extra/httpd-multilang-errordoc.conf
+Duplicated /httpd-2.2-x64/conf/original/magic
+ to /httpd-2.2-x64/conf/magic
+Duplicated /httpd-2.2-x64/conf/original/extra/httpd-autoindex.conf
+ to /httpd-2.2-x64/conf/extra/httpd-autoindex.conf
+Duplicated /httpd-2.2-x64/conf/original/extra/httpd-vhosts.conf
+ to /httpd-2.2-x64/conf/extra/httpd-vhosts.conf
+Duplicated /httpd-2.2-x64/conf/original/extra/httpd-default.conf
+ to /httpd-2.2-x64/conf/extra/httpd-default.conf
+Duplicated /httpd-2.2-x64/conf/original/mime.types
+ to /httpd-2.2-x64/conf/mime.types
+Duplicated /httpd-2.2-x64/conf/original/charset.conv
+ to /httpd-2.2-x64/conf/charset.conv
+Duplicated /httpd-2.2-x64/conf/original/extra/httpd-manual.conf
+ to /httpd-2.2-x64/conf/extra/httpd-manual.conf
+Duplicated /httpd-2.2-x64/conf/original/extra/httpd-mpm.conf
+ to /httpd-2.2-x64/conf/extra/httpd-mpm.conf
+Duplicated /httpd-2.2-x64/conf/original/extra/httpd-info.conf
+ to /httpd-2.2-x64/conf/extra/httpd-info.conf
+Duplicated /httpd-2.2-x64/conf/original/extra/httpd-dav.conf
+ to /httpd-2.2-x64/conf/extra/httpd-dav.conf
+Duplicated /httpd-2.2-x64/conf/original/extra/httpd-languages.conf
+ to /httpd-2.2-x64/conf/extra/httpd-languages.conf
+Duplicated /httpd-2.2-x64/conf/original/httpd.conf
+ to /httpd-2.2-x64/conf/httpd.conf
+Duplicated /httpd-2.2-x64/conf/original/extra/httpd-userdir.conf
+ to /httpd-2.2-x64/conf/extra/httpd-userdir.conf
+Duplicated /httpd-2.2-x64/conf/original/extra/httpd-ssl.conf
+ to /httpd-2.2-x64/conf/extra/httpd-ssl.conf
+Duplicated /httpd-2.2-x64/conf/original/extra/httpd-multilang-errordoc.conf
+ to /httpd-2.2-x64/conf/extra/httpd-multilang-errordoc.conf

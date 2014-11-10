@@ -1,0 +1,215 @@
+You should give this a try:
+
+Make a form for apply for job
+in which user enters his name,address,contact info
+attaches his resume as pdf or doc or docx file
+
+and make sure there is a page to see all such records
+
+35 minutes agoSmarth Behl
+//MYSQL_FETCH_ARRAY();
+The type of array that is to be fetched. 
+It's a constant and can take the 
+following values:
+
+MYSQL_ASSOC, 
+MYSQL_NUM, and 
+MYSQL_BOTH.
+
+include
+require
+
+Server Side Includes (SSI)
+
+You can insert the content of 
+one PHP file into another PHP file 
+before the server executes it, 
+with the include() or require() function.
+
+The two functions are 
+identical in every way,
+except how they handle errors:
+
+header
+menu slider
+body area 
+footer
+copyright
+
+
+include() 
+generates a warning, 
+but the script will continue execution
+
+require() 
+generates a fatal error, 
+and the script will stop
+
+<?php include('config.php') ?>
+
+Server side includes saves a lot of work. 
+This means that you can create 
+a standard header, footer, 
+or menu file for all your web pages. 
+When the header needs to be updated, 
+you can only update the include file, 
+or when you add a new page to your site, 
+you can simply change the menu file
+(instead of updating the links on 
+all your web pages).
+
+PHP include() Function
+
+The include() function takes all the 
+content in a specified file and includes
+it in the current file.
+
+If an error occurs, the include() 
+function generates a warning, 
+but the script will continue execution.
+
+Example 1
+
+Assume that you have a standard header file,
+called "header.php". 
+To include the header file in a page, 
+use the include() function:
+
+<html>
+<body>
+
+<?php include("header.php"); ?>
+<h1>Welcome to my home page!</h1>
+<p>Some text.</p>
+
+</body>
+</html>
+Example 2
+
+Assume we have a standard menu file, called "menu.php", that should be used on all pages:
+
+<a href="/default.php">Home</a>
+<a href="/tutorials.php">Tutorials</a>
+<a href="/references.php">References</a>
+<a href="/examples.php">Examples</a> 
+<a href="/about.php">About Us</a> 
+<a href="/contact.php">Contact Us</a>
+All pages in the Web site should include this menu file. Here is how it can be done:
+
+<html>
+<body>
+
+<div class="leftmenu">
+<?php include("menu.php"); ?>
+</div>
+
+<h1>Welcome to my home page.</h1>
+<p>Some text.</p>
+
+</body>
+</html>
+If you look at the source code 
+of the page above (in a browser), 
+it will look like this:
+
+<html>
+<body>
+
+
+
+
+<div class="leftmenu">
+<a href="/default.php">Home</a>
+<a href="/tutorials.php">Tutorials</a>
+<a href="/references.php">References</a>
+<a href="/examples.php">Examples</a> 
+<a href="/about.php">About Us</a> 
+<a href="/contact.php">Contact Us</a>
+</div>
+
+<h1>Welcome to my home page!</h1>
+<p>Some text.</p>
+
+</body>
+</html>
+
+PHP require() Function
+
+The require() function is
+identical to include(),
+except that it handles errors differently.
+
+If an error occurs, 
+the include() function generates a warning,
+but the script will continue execution. 
+The require() generates a fatal error, 
+and the script will stop.
+
+Error Example include() Function
+
+<html>
+<body>
+
+
+
+
+
+A cookie is often used to identify a user.
+
+What is a Cookie?
+
+
+
+A cookie is often 
+used to identify a user. 
+A cookie is a small file 
+that the server embeds on the user's computer. 
+Each time the same computer requests
+a page with a browser, it will send the cookie too.
+With PHP, you can both create and 
+retrieve cookie values.
+
+How to Create a Cookie?
+
+The setcookie()
+function is used to set a cookie.
+
+http headers 
+
+referrer
+server
+cookie
+location
+mydata
+
+content 
+
+<?php
+function(){
+
+}
+
+setcookie
+?>
+
+
+Note: The setcookie() function must 
+appear BEFORE the <html> tag.
+
+Syntax
+SESSION HIJACKING USING COOKIES
+
+OWASP
+
+setcookie(name, value, expire, path, domain);
+
+Example 1
+
+In the example below, we will create a 
+cookie named "user" and assign the value 
+"Alex Porter" to it. We also specify that
+the cookie should expire after one hour:
+
+<?php
+setcookie("user", "Harry Porter", time()+3600);
+?>

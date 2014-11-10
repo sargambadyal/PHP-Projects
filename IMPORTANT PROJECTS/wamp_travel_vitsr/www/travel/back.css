@@ -1,0 +1,40 @@
+#wrapper{
+margin: 0 auto;
+background-color:#000;
+opacity:.8;
+width:900px;
+height:1000px;
+-webkit-border-radius:30px;
+text-align:center;
+}
+
+#head
+{
+background-image:url(4.png);width:900px;height:200px;
+}
+#tab
+{
+float:right;width:80px; height:40px; font-size:14px;-webkit-border-radius:30px;-webkit-box-shadow:5px 5px 5px #000
+}
+#tab2
+{
+float:right;width:90px; height:50px; font-size:14px;-webkit-border-radius:30px;-webkit-box-shadow:5px 5px 5px #000
+}
+.cite
+{
+font-family: verdana; font-size:13px;color:#f00;
+}
+.obj1{
+color:#abc;
+font-family:verdana;
+}
+.obj2
+{
+color:#abc;
+font-family:verdana;
+font-size:15px;
+}
+.image1{
+width:270px;
+}
+	

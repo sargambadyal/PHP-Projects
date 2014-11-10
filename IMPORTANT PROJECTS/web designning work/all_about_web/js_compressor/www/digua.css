@@ -1,0 +1,84 @@
+BODY {
+    font-family: arial;
+    font-size: 12px;
+    color: #434e8e;
+    background-color: #fffbdf;
+}
+
+A, A:focus, A:visited, A:active {
+    outline: 0;
+    color: #0046c6;
+    text-decoration: none;
+    white-space: nowrap;
+}
+
+A:hover {
+    text-decoration: underline;
+}
+ 
+INPUT, SELECT, TEXTAREA {
+    border: solid 1px #6295f1;
+    font-size: 11px;
+} 
+       
+H1, #page {
+    width: 780px;
+    margin: 5px auto;
+    text-align: justify;
+}
+
+H5 {
+    font-size: 105%;
+    margin: 5px 0 1px 0;
+}
+
+.code {
+    font-family: monospace, courier;
+    font-size: 12px;
+}
+
+BLOCKQUOTE {
+    display: block;
+    margin: 3px 10px 3px 10px;
+    padding: 2px 10px 2px 10px;
+    border: solid 1px #eeeeee;
+    background-color: #cccccc;
+    color: #111111;
+}
+
+.sshot {
+    border: solid 1px #434e8e;
+    display: inline-block;
+    margin: 10px;
+    padding: 10px;
+    text-align: center;
+    vertical-align: top;
+}
+
+.sshot IMG {
+    clear: both;
+    display: block;
+}
+
+#rhn {
+    border: solid 1px #434e8e;
+    display: block;    
+    float: right;
+    margin: 10px;
+    padding: 5px;
+    width: 170px;
+}
+
+#rhn UL {
+    margin: 0;
+    padding: 0;
+}
+
+#rhn LI {
+    margin: 3px 0 3px 15px;
+    padding: 0;
+}
+
+.important {
+    font-weight: bold;
+}

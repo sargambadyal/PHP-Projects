@@ -1,0 +1,44 @@
+
+<html>
+
+	<head>
+
+		<title>lecture 1</title>
+
+		<meta name="description" content="this is a page for vitu"/>
+
+		<meta name="author" content="Sargam"/>
+
+	</head>
+
+	<body bgcolor="pink">
+
+<H1><B><FONT FACE="ravie"><FONT COLOR="white"><CENTER>Vellore Institute Of technology, vellore</H1></B></FONT FACE></FONT COLOR></CENTER>
+
+		
+		<table border="4">
+      
+		<tr>
+		<td> <img src="blue_angel_001.jpg"> </td>
+
+		<td><h2> <a href="vinfo.html">Information</a></h2></td>&nbsp;
+
+		<td><h2> <a href="vacd.html">Acedamics</a></h2></td>
+
+		<td><h2> <a href="vadmin.html">Admissions</a></h2></td>
+
+		</tr>
+
+		
+
+		</table>
+
+	<iframe scr="http://microsoft,com">
+
+	<form action ="" method="">      <!-- action redirects you to the page you r expected to move to-->
+
+	
+
+	</body>
+
+</html>	

@@ -1,0 +1,97 @@
+-- phpMyAdmin SQL Dump
+-- version 2.7.0-pl2
+-- http://www.phpmyadmin.net
+-- 
+-- Host: localhost
+-- Generation Time: Mar 25, 2014 at 04:17 PM
+-- Server version: 5.0.18
+-- PHP Version: 5.1.2
+-- 
+-- Database: `audioshare`
+-- 
+
+-- --------------------------------------------------------
+
+-- 
+-- Table structure for table `admin`
+-- 
+
+CREATE TABLE `admin` (
+  `username` varchar(20) NOT NULL,
+  `password` varchar(20) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+-- 
+-- Dumping data for table `admin`
+-- 
+
+INSERT INTO `admin` VALUES ('sargam', 'sargam');
+INSERT INTO `admin` VALUES ('ryan', 'ryan');
+
+-- --------------------------------------------------------
+
+-- 
+-- Table structure for table `audio`
+-- 
+
+CREATE TABLE `audio` (
+  `id` int(20) NOT NULL auto_increment,
+  `title` varchar(20) NOT NULL,
+  `artist` varchar(20) NOT NULL,
+  `audio_type` varchar(20) NOT NULL,
+  `description` varchar(50) NOT NULL,
+  `cover` varchar(70) NOT NULL,
+  `file` varchar(70) default NULL,
+  `email` varchar(30) NOT NULL,
+  PRIMARY KEY  (`id`)
+) ENGINE=InnoDB DEFAULT CHARSET=latin1 AUTO_INCREMENT=4 ;
+
+-- 
+-- Dumping data for table `audio`
+-- 
+
+INSERT INTO `audio` VALUES (1, 'kal ho na ho', 'sonu nigam', 'Romantic', '		nkhojml', 'computer.JPG', ' ', 'sera.bravo004@gmail.com');
+INSERT INTO `audio` VALUES (2, 'kal ho na ho', 'sonu nigam', 'Sad', '	good									    ', 'thumb5.jpg', ' ', 'sera.bravo004@gmail.com');
+INSERT INTO `audio` VALUES (3, 'young n beautiful', 'danna', 'Romantic', '	good song									    ', 'm8.JPG', ' ', 'sera.bravo004@gmail.com');
+
+-- --------------------------------------------------------
+
+-- 
+-- Table structure for table `query`
+-- 
+
+CREATE TABLE `query` (
+  `name` varchar(20) NOT NULL,
+  `query` varchar(40) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+-- 
+-- Dumping data for table `query`
+-- 
+
+INSERT INTO `query` VALUES (':)', 'ryan');
+INSERT INTO `query` VALUES (':)', 'ryan');
+INSERT INTO `query` VALUES ('i dnt like', 'sara');
+INSERT INTO `query` VALUES ('fasdf', 'dge');
+
+-- --------------------------------------------------------
+
+-- 
+-- Table structure for table `user`
+-- 
+
+CREATE TABLE `user` (
+  `name` text NOT NULL,
+  `email` varchar(30) NOT NULL,
+  `sex` text NOT NULL,
+  `dob` date NOT NULL,
+  `password` varchar(20) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+-- 
+-- Dumping data for table `user`
+-- 
+
+INSERT INTO `user` VALUES ('ryan philip', 'rkp_rhino@gmail.com', 'm', '2014-11-06', 'ryan');
+INSERT INTO `user` VALUES ('sargam', 'sera.bravo004@gmail.com', 'f', '2014-01-18', 'sargam');
+INSERT INTO `user` VALUES ('moody', 'moody@gmail.com', 'm', '2014-02-19', 'moody');

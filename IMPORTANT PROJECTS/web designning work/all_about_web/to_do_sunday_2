@@ -1,0 +1,476 @@
+Taking User input
+
+
+User input should be validated on the browser whenever possible (by client scripts). Browser validation is faster and reduces the server load.
+
+You should consider server validation if the user input will be inserted into a database.
+ A good way to validate a form on the server is to post the form to itself, instead of jumping to a different page. 
+The user will then get the error messages on the same page as the form. \This makes it easier to discover the error
+
+$_GET
+
+$_POST
+
+query strings
+
+http_build_query
+
+<?php
+$data = array('foo'=>'bar',
+              'baz'=>'boom',
+              'cow'=>'milk',
+              'php'=>'hypertext processor');
+
+echo http_build_query($data) . "\n";
+echo http_build_query($data, '', '&amp;');
+
+?>
+
+
+
+$_GET
+
+$_POST
+
+examples.............
+difference................
+exercise.........do validation using jquery validation as well as back end and on same page submit
+
+----------Doing PHP File Upload--------------
+
+the enctype attribute...............
+The enctype attribute of the <form> tag specifies which content-type to use when submitting the form. 
+"multipart/form-data" is used when a form requires binary data, like the contents of a file, to be uploaded
+
+<html>
+<body>
+<form action="upload_file.php" method="post"
+enctype="multipart/form-data">
+<label for="file1">Filename:</label>
+<input type="file" name="file" id="file1" /> 
+<br />
+<input type="submit" name="submit" value="Submit" />
+</form>
+
+</body>
+</html>
+
+
+Note: Allowing users to upload files is a big security risk. 
+Only permit trusted users to perform file uploads
+
+<input type="file" name="myfile"/>
+
+By using the global PHP $_FILES array 
+you can upload files from a client computer to 
+the remote server.
+
+$_FILES["myfile"]
+
+temporary directoy save
+
+
+The first parameter is the form's 
+input name and the second index can 
+be either "name", "type", "size", 
+"tmp_name" or "error". Like this:
+
+$_FILES["file"]["name"] - the name of the uploaded file
+$_FILES["file"]["type"] - the type of the uploaded file
+$_FILES["file"]["size"] - the size in bytes 
+of the uploaded file
+$_FILES["file"]["tmp_name"] - the name of the 
+temporary copy of the file stored on the server
+$_FILES["file"]["error"] - the error code 
+resulting from the file upload
+This is a very simple way of uploading files. 
+For security reasons, you should add restrictions 
+on what the user is allowed to upload.
+
+
+Restrictions on Upload
+
+In this script we add some 
+restrictions to the file upload. 
+The user may only upload .gif or .jpeg files
+ and the file size must be under 20 kb:
+
+<input type="file" name="file"/> 
+ 
+<?php
+if ((($_FILES["file"]["type"] == "image/gif")
+|| ($_FILES["file"]["type"] == "image/jpeg")
+|| ($_FILES["file"]["type"] == "image/pjpeg"))
+&& ($_FILES["file"]["size"] < 20000))
+  {
+  if ($_FILES["file"]["error"] > 0)
+    {
+    echo "Return Code: " . $_FILES["file"]["error"] . "<br />";
+    }
+  else
+    {
+    echo "Upload: " . $_FILES["file"]["name"] . "<br />";
+    echo "Type: " . $_FILES["file"]["type"] . "<br />";
+    echo "Size: " . ($_FILES["file"]["size"] / 1024) . " Kb<br />";
+    echo "Temp file: " . $_FILES["file"]["tmp_name"] . "<br />";
+
+    if (file_exists("upload/" . $_FILES["file"]["name"]))
+      {
+      echo $_FILES["file"]["name"] . " already exists. ";
+      }
+    else
+      {
+      move_uploaded_file($_FILES["file"]["tmp_name"],
+      "upload/" . $_FILES["file"]["name"]);
+      echo "Stored in: " . "upload/" . $_FILES["file"]["name"];
+      }
+    }
+  }
+else
+  {
+  echo "Invalid file";
+  }
+?>
+
+
+--------DATABASE-------------
+
+----RDBMS---------------------
+
+-----MS SQL , ORACLE, MYSQL , POSTGREE SQL ------
+
+----SQL STRUCTURED QUERY LANGUAGE----
+
+----------------------SQL--------------------------
+
+SQL is a standard language for 
+accessing and manipulating databases.
+
+What is SQL?
+
+SQL stands for Structured Query Language
+SQL lets you access and manipulate databases
+SQL is an ANSI
+(American National Standards Institute) standard
+
+What Can SQL do?
+
+SQL can execute queries against a database
+SQL can retrieve data from a database
+SQL can insert records in a database
+SQL can update records in a database
+SQL can delete records from a database
+SQL can create new databases
+SQL can create new tables in a database
+SQL can create stored procedures in a database
+SQL can create views in a database
+SQL can set permissions on tables, procedures, and views
+
+
+SQL is a Standard - BUT....
+
+Although SQL is an ANSI 
+(American National Standards Institute) standard,
+ there are many different versions of the SQL language.
+
+However, to be compliant with the ANSI standard, 
+they all support at least the major commands
+ (such as SELECT, UPDATE, DELETE, INSERT, WHERE) 
+in a similar manner.
+
+Note: Most of the SQL database programs also
+ have their own proprietary extensions 
+ in addition to the SQL standard!
+
+
+
+RDBMS
+
+RDBMS stands for Relational Database Management System.
+
+RDBMS is the basis for SQL, and for all modern database systems like MS 
+SQL Server, IBM DB2, Oracle, MySQL, and Microsoft Access.
+
+The data in RDBMS is stored in database objects called tables.
+
+A table is a collection of related data entries 
+and it consists of columns and rows.
+
+Keep in Mind That...
+
+SQL is not case sensitive
+
+ -- SELECT name,age from users where sex='female' 
+
+SELECT column_name(s)
+FROM table_name
+
+
+
+
+------------SELECT WHERE-----------------
+
+Quotes Around Text Fields
+
+=	Equal
+<>	Not equal
+>	Greater than
+<	Less than
+>=	Greater than or equal
+<=	Less than or equal
+BETWEEN	Between an inclusive range
+LIKE	Search for a pattern
+IN	If you know the exact value you want
+ to return for at least one of the columns
+
+
+AND OR OPERATOR IN SQL
+
+SELECT * FROM Persons WHERE
+LastName='Svendson'
+AND (FirstName='Tove' OR FirstName='Ola')
+
+---------ORDER BY---------
+SELECT column_name(s)
+FROM table_name
+ORDER BY column_name(s) ASC|DESC
+
+SELECT * FROM Persons
+ORDER BY LastName DESC
+
+
+--------INSERT---------
+INSERT INTO table_name (column1, column2, column3,...)
+VALUES (value1, value2, value3,...)
+
+
+-------UPDATE---------
+UPDATE table_name
+SET column1=value, column2=value2,...
+WHERE some_column=some_value
+
+
+
+--------DELETE---------
+DELETE FROM table_name
+WHERE some_column=some_value
+
+
+------------NoRMAliZed and denormalized-----------
+employee dept example
+
+------------SQL LIMIT MYSQL------
+
+SELECT column_name(s)
+FROM table_name
+LIMIT number
+
+-------------SQL BETWEEN------------
+
+SELECT column_name(s)
+FROM table_name
+WHERE column_name
+BETWEEN value1 AND value2
+
+
+--------Truncate table-----------
+
+---------PRIMARY KEY AND FORIEGN KEY--------------
+The PRIMARY KEY constraint uniquely identifies each 
+record in a database table.
+
+Primary keys must contain unique values.
+
+A primary key column cannot contain NULL values.
+
+Each table should have a primary key, and each 
+table can have only ONE primary key.
+
+----------MYSQL DATA TYPES------------------
+CHAR(size)	Holds 
+a fixed length string (can contain letters, 
+numbers, and special characters). 
+The fixed size 
+is specified in parenthesis. 
+Can store up to 255 characters
+VARCHAR(size)	
+Holds a variable length string
+ (can contain letters, numbers,
+ and special characters). 
+ The maximum size is specified in parenthesis.
+ Can store up to 255 characters. 
+ Note: If you put a greater value than 255 
+ it will be converted to a TEXT type
+TINYTEXT	Holds a string with a maximum length of 255 characters
+TEXT	Holds a string with a 
+maximum length of 65,535 characters
+BLOB	For BLOBs 
+(Binary Large OBjects). Holds up to 65,535 bytes of data
+MEDIUMTEXT	Holds a string with a maximum length of 16,777,215 characters
+MEDIUMBLOB	For BLOBs (Binary Large OBjects). Holds up to 16,777,215 bytes of data
+LONGTEXT	Holds a string with a maximum length of 4,294,967,295 characters
+LONGBLOB	For BLOBs (Binary Large OBjects). Holds up to 4,294,967,295 bytes of data
+ENUM(x,y,z,etc.)	
+Let you enter a list
+ of possible values. 
+ You can list up to 65535 values in an ENUM list. If a value is inserted that is not in the list, a blank value will be inserted.
+Note: The values are sorted in the order you enter them.
+
+You enter the possible values in this format: ENUM('X','Y','Z')
+
+
+---------------------SQL Alias------------------
+
+SELECT column_name(s)
+FROM table_name
+AS alias_name
+
+
+----------------SQL VIEWS-----------------
+
+
+CREATE VIEW view_name AS
+SELECT column_name(s)
+FROM table_name
+WHERE condition
+
+
+
+-------------SQL Functions-------------------
+
+SELECT AVG(column_name) FROM table_name
+
+SELECT COUNT(column_name) FROM table_name
+
+COUNT(*) --total records
+
+
+first(),last(),max(),min(),sum()
+
+
+
+------------SQL Group By-------------
+
+The GROUP BY statement is used in conjunction 
+with the aggregate functions to group the result-set by one or more columns.
+
+
+SELECT Customer,OrderDate,SUM(OrderPrice) FROM Orders
+GROUP BY Customer,OrderDate
+
+
+---Having--------
+
+SELECT Customer,SUM(OrderPrice) FROM Orders
+GROUP BY Customer
+HAVING SUM(OrderPrice)<2000
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

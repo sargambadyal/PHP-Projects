@@ -1,0 +1,96 @@
+body,td,th,p,input,li,img {font-family:verdana,arial,tahoma;font-size: 0.84em; color:#707080;}
+
+body {margin:0px; padding:0px; background: #fff url(image/bg.gif) repeat-y top left;}
+
+a {text-decoration:none;}
+
+a:hover {text-decoration:underline}
+
+img {border: 0px;}
+
+p {margin: 6px 0px 7px 0px;}
+
+.dhead {background: url(image/bgtop.gif) repeat-x top left; height:147;} 
+
+#topa1 {width:250px; height:77px; background: url(image/topa1.gif); float:left;}
+#topa2 {width:250px; height:77px; background: url(image/topa2.gif); float:left;}
+#topa3 {width:231px; height:77px; background: url(image/topa3.gif); float:left;}
+#topb1 {width:250px; height:70px; background: url(image/topb1.gif); float:left;}
+#topb2 {width:250px; height:70px; background: url(image/topb2.gif); float:left;}
+#topb3a1 {width:77px; height:70px; background: url(image/topb3a1.gif); float:left;}
+#topb3a2 {width:77px; height:70px; background: url(image/topb3a2.gif); float:left;}
+#topb3a3 {width:77px; height:70px; background: url(image/topb3a3.gif); float:left;}
+
+
+.name {position: absolute; top: 52px; left: 36px;}
+
+.emblem {position: absolute; top: 20px; left: 200px;} 
+
+.topmenu {position: absolute; top: 8px; left: 334px;}
+
+.dbody {background: url(image/bgbody.gif) repeat-x top left;}
+
+.leftcell {width: 183px; float:left; background: #fff  url(image/bg.gif) repeat-y top left;}
+
+.menutop {background: #fff url(image/menutop.gif) no-repeat top right; width: 183px; height:29px;}
+
+.menubody {background: #fff url(image/menuleft.gif) repeat-y top left;}
+	
+.menubody .decor {background: url(image/menubg.gif) no-repeat top left; padding-left:18px;}
+
+.menubody .decor div {padding-top:5px; background: #fff url(image/menuhr.gif) no-repeat top left;} 
+
+.menubody .decor .first {padding-top:2px; background: #fff url(image/menufhr.gif) no-repeat top left;}
+
+.menubot {background: #fff url(image/menubot.gif) no-repeat top left; width: 155px; height: 27px;}
+	
+.centercell {float:left; width:379px; background: #fff;}
+
+.rightcell {width: 188px; background: #fff url(image/rcell.gif) repeat-y top right; float:left;}
+
+.decel { width: 5px; height:217px; background: #fff url(image/decel.gif) no-repeat; float: left;}
+
+.title {height: 29px; background: #9A40CC;}
+
+.title img {margin:11px 0px 0px 13px;}
+
+.info {margin-left:13px;}
+
+.col1 {float: left; width: 130px;}
+
+.col2 {float: left; width: 235px;}
+
+h1 {color: #4D8DD1; font-family: arial; color: #4D8DD1; font-weight: normal; font-size: 1.5em;}
+
+h1 span { color: #707080; font-size: 0.8em;}
+
+h3 { color: #707080; font-size: 0.9em; font-family: arial; margin-bottom: 3px;} 
+
+h3 span {font-size: 0.8em; font-weight: normal;}
+
+.rightcell .hl {height: 1px; width: 164px; background: #e3e3e3; overflow: hidden;} 
+
+span.date {color: #CC9FE5;} 
+
+.bottom {padding: 0px 0px 0px 0px; border-bottom: 30px #FBFBFB solid; margin-top: 50px;}
+
+.footleft {background: url(image/footleft.gif) no-repeat left bottom; width:141px; height: 51px;}
+
+.footcntr {background: url(image/footcntr.gif) no-repeat left bottom; padding: 0px 0px 25px 0px; width: 511px;}
+
+.footblock {margin: 0px 8px 0px 12px; border-top: 1px #9A40CC dotted; padding:8px 0px;} 
+
+.footright {background: #A7D2DB;}
+
+.footright div {background: url(image/footright.gif) no-repeat left bottom; width: 2px; height: 18px;}
+
+.footrright {background: #FBFBFB url(image/footrright.gif) repeat-x;}
+
+.footrright div {background: url(image/footrright.gif) repeat-x; height: 18px;}
+
+.altmenu, .copyright {font-size: 0.75em; color: #9A40CC; margin: 2px 0px 4px 0px;}
+
+.copyright {color:#B5BAC3;}
+
+.altmenu a {color:#707080}
+

@@ -1,0 +1,209 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+        "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta http-equiv="Content-type" content="text/html; charset=UTF-8"/>
+    <title>Patu Digua - Web Obfuscator and Compressor</title>
+    <link rel="stylesheet" type="text/css" href="digua.css"/>
+    <link rel="shortcut icon" href="digua.ico"/>
+</head>
+<body>
+
+<div id="page">
+
+    <h1><img src="digua.png" alt="Digua"/></h1>
+    
+    <ul id="rhn">
+        <li><h5>Overview</h5>
+            <ul>
+                <li><a href="#whatis">What is?</a></li>
+                <li><a href="#whatis">Why?</a></li>
+                <li><a href="#features">Features</a></li>
+                <li><a href="#changes">Changes</a></li>
+                <li><a href="#sshots">Screenshots</a></li>
+                <li><a href="#how">How it works?</a></li>
+                <li class="important"><a href="http://sourceforge.net/projects/digua/files/">Downloads</a></li>
+                <li class="important"><a href="http://sourceforge.net/project/project_donations.php?group_id=265934">DONATE</a></li>
+            </ul>
+        </li>
+        <li><h5>Usage</h5>
+            <ul>
+                <li><a href="#usage">Usage</a></li>
+                <li><a href="#conf">Configuration</a></li>
+                <li class="important"><a href="http://sourceforge.net/projects/digua/files/">Downloads</a></li>
+                <li><a href="links.html">Alternate downloads</a></li>
+            </ul>
+        </li>
+        <li><h5>Contribute</h5>
+            <ul>
+                <li><a href="#devel">Development</a></li>
+                <li class="important"><a href="#help">HELP WANTED</a></li>
+                <li class="important"><a href="http://sourceforge.net/project/project_donations.php?group_id=265934">DONATE</a></li>
+                <li><a href="http://www.sourceforge.net/projects/digua">Project @ SourceForge</a></li>
+                <li><a href="https://sourceforge.net/apps/phpbb/digua/">Forum</a></li>
+                <li><a href="https://sourceforge.net/apps/mantisbt/digua/">Bugs / Features</a></li>
+            </ul>
+        </li>
+    </ul>
+
+    <h3><a name="whatis"></a>What is Patu Digua</h3>
+    <p>Patu Digua, or shortly Digua, is a web (HTML, JavaScript and CSS) obfuscator and compressor. It will reduce the size of your website, boosting performance this way, and it will make your JavaScript source code harder to be copied.
+    </p>
+
+
+    <h3><a name="why"></a>Why?</h3>
+    <p>The question is why to use such a program. Why to obfuscate your website? First of all maybe you really don’t want somebody to copy your JavaScript code as it is business critical. Of course, this is not like the code will be compiled and linked, only harder to read and understand. And for this you should definitely use the obfuscation for JavaScript variables and functions. 
+    <br />But this is not the only reason to use this program. The compression of the web code is what I think is really matters. Less code means faster websites.
+    </p>
+
+
+    <h3>Why Patu Digua?</h3>
+    <p><a href="http://en.wikipedia.org/wiki/Patu_digua">Patu digua</a> is the smallest known spider in the world.</p>
+
+
+    <h3><a name="features"></a>Features</h3>
+    <p>Patu Digua has a unique set of features.</p>
+    <ul>
+        <li>obfuscation and compression of HTML, CSS and JavaScript files</li>
+        <li>automatic processing of entire directories</li>
+        <li>specify which files are interpreted like HTML, CSS or JavaScript (v0.2)</li>
+        <li>removal of unsignificant whitespace and newline characters</li>
+        <li>possibility to preserve whitespaces in some tags</li>
+        <li>removal of comments</li>
+        <li>case transformation of HTML tags: to upper case, to lower case or randomly mixed (v0.2)</li>
+        <li>renaming of HTML IDs, CSS classes and JavaScript variables, labels, functions</li>
+        <li>possibility of exclusion of different names from the renaming process</li>
+        <li>processing of content in HTML tags or attributes as JavaScript or CSS, 
+            e.g. style or onclick attribute (v0.2)</li>
+        <li>saving translations for future use</li>
+        <li>fully configurable through property files</li>
+        <li>run both from GUI and command line</li>
+    </ul>
+
+
+    <h3><a name="changes"></a>Changes</h3>
+    <ul>
+        <li><h5>v0.2</h5>
+            <ul>
+                <li>HTML tags can be transformed to upper case, lower case or randomly mixed</li>
+                <li>HTML attributes like <code>style</code> are processed like CSS</li>
+                <li>HTML attributes like <code>onload</code> are processed like JavaScript</li>
+                <li>option to specify the suffixes for files that they will be interpreted like
+                    JavaScript, CSS or HTML
+                    </li>
+                <li>some options are moved to the Advanced panel</li>
+            </ul>
+        </li>
+        <li><h5>v0.1</h5>
+            <ul>
+                <li>initial release</li>
+            </ul>
+        </li>
+    </ul>
+
+
+    <h3><a name="how"></a>How it works?</h3>
+    <p>How is the obfuscation and compression done by Patu Digua? Basically a root folder for your site is provided and this will be the source. The destination will be the processed file/folder structure for your site. Every file in the source folder will be processed recursively.
+    <br />For HTML files (names ending with *.html and *.htm) unnecessary whitespaces and comments are removed. Because in some tags, like PRE and XMP, whitespaces are relevant those are maintained in there. SCRIPT and STYLE tags are processed like JavaScript, respectively CSS files. HTML IDs (specified in the id or for attribute) and CSS classes (specified in class attribute) are translated/obfuscated.
+    <br />For JavaScript files (names ending with *.js) unnecessary whitespaces and comments are removed. The global and local variables, labels and functions are translated/obfuscated.
+    <br />For CSS files (names ending with *.css) unnecessary whitespaces and comments are removed. The HTML IDs (selector starting with hash(#)) and CSS classes (selector starting with dot(.)) are translated/obfuscated.
+    <br />An entity, like an HTML ID, CSS class or JavaScript variable is translated/obfuscated as follows. For every entity a new name is generated, basically composed by a prefix and a random or sequentially generated number between a given range(let’s say 1000 and 9999). If for HTML IDs we specify ‘i’ as the prefix, then a possible generated name will be i5478 or i4592. Every occurrence of that entity will be replaced with the new name. All the pairs (old name = new name) will be saved into a translation file for future use. So if you translate portions of a website then it would make sense to obfuscate using the same names. Patu Digua offers the possibility to ignore some entities from the obfuscation process.
+    <br />The files that are not processed, like images, are simply copied from source to destination. Other files, like temporary ones, are simply ignored and skipped in the process.
+    </p>
+
+
+    <h3><a name="usage"></a>Usage</h3>
+    <p>Patu Digua can be used
+        <ul>
+            <li>from the command line interface</li>
+            <li>in your Java program</li>
+            <li>from the graphical interface</li>
+        </ul>
+    </p>
+    
+    <h4>Command line interface</h4>
+    <p>Patu digua can be run from the command line interface. The command line interface options are the following:</p>
+    <ul>
+        <li>-s/--src		The source to be processed, which is usually a directory but can be a file as well.</li> 
+        <li>-d/--dest	The destination where the processed files or directories are stored. If the source is a file this can be a file or a directory. If the source is a directory, the destination must be a directory. If this a relative path, then it is relative to the source directory, not to the current folder.</li>
+        <li>-c/--conf	The configuration file.</li>
+        <li>-n/--nogui If this is specified, Patu Digua does not start in GUI mode, but starts processing right away.</li>
+    </ul>
+    
+    <h4>Java Integration</h4>
+    <p>Patu digua can be easily integrated in your Java program. And it takes only one line of code:</p>
+    <blockquote>new Digua(“/path/to/config.file”).run();</blockquote>
+    <p>It will load the specified configuration file and it will run the entire compression/obfuscation. If you want to specify another source directory/file than the one in the configuration file:</p>
+    <blockquote><pre>
+    XProperties options = new XProperties();
+    options.load(“/path/to/config.file”);
+    options.put(“src”, “/path/to/source.file”);
+    Digua digua = new Digua(options);
+    digua.run();</pre></blockquote>
+    <p>In the same way you can specify other options too. For detailed specification please consult the Configuration section.
+    The entire process can be run in a separate thread:</p>
+    <blockquote>new Thread(new Digua(“/path/to/config.file”)).start();</blockquote>
+    
+    <h4><a name="sshots"></a>Graphical interface</h4>
+    <p>The graphical interface offers you the possibility to easily modify a configuration file and start the compression/obfuscation process. It has two modes of operation: normal and drop zone. In normal you can specify the options as in any other program. The drop zone is a box (that usually sits always on top) and where you can drag and drop directories and files that they will be automatically processed according to the options specified in normal mode.</p>
+    <div class="sshot"><img alt="Drop zone mode" src="img/sshot2.png" />Full mode options</div>
+    <div class="sshot"><img alt="Drop zone mode" src="img/sshot1.png" />Drop zone mode</div>
+    <div class="sshot"><img alt="Drop zone mode" src="img/sshot3.png" />Processing frame</div>
+
+
+    <h3><a name="conf"></a>Configuration</h3>
+    <p>All the configuration options that are specified in the configuration files are described like properties.
+    <br />Check out this <a href="default.properties">configuration file</a>, where every property has a comment before to explain it in detail. Such a configuration file can be found in the distribution too.
+    </p>
+    <blockquote>
+        <iframe src="default.properties" width="100%" height="400px"></iframe>
+    </blockquote>
+
+    <h3><a name="devel"></a>Patu Digua Development</h3>
+    <p>Patu Digua is written in Java and heavily based on <a href="http://www.antlr.org/">ANTLR</a>. The user interface is designed in Swing and the command line interface is using <a href="http://commons.apache.org/cli">Commons CLI</a>.</p>
+
+
+    <h3>Building</h3>
+    <p>You can easily build Patu Digua from the sources. For this you have to retrieve the sources from Subversion and follow the next steps
+        <ol>
+            <li>Retrieve sources from Subversion</li>
+            <li>Install JDK >= 6</li>
+            <li>Install Ant >= 1.6</li>
+            <li>Run ant in the root folder. This will build Patu Digua with the graphical interface. If you want to disable the graphical interface (default distribution), just edit the build.properties file. You will find there instructions in the comments.</li>
+        </ol>
+    </p>
+
+
+    <h3><a name="help"></a>HELP WANTED!</h3>
+    <p>
+        If you are a developer, designer or tester then you can help Patu Digua development in many ways:
+    </p>
+    <ul>
+        <li>use and test Patu Digua</li>
+        <li class="important">test under different OSes and with OpenJDK</li>
+        <li class="important">SHARE YOUR SUCCESS STORIES WITH Patu Digua</li>
+        <li>write automated and manual test cases</li>
+        <li>report any bugs and propose new features</li>
+        <li>develop new features</li>
+        <li>design a better logo</li>
+        <li>write (video) tutorials</li>
+        <li>...</li>
+    </ul>
+    <p>
+        Just use the <a href="https://sourceforge.net/apps/phpbb/digua">forum</a> and post there how do you want to help Patu Digua development.
+    </p>
+    <p>You can also <a href="http://sourceforge.net/project/project_donations.php?group_id=265934">DONATE</a> to the project.</p>
+
+
+    <h3>Useful links</h3>
+    <p>
+        <a href="http://sourceforge.net/projects/digua/files/">Downloads</a>
+        | <a href="http://www.sourceforge.net/projects/digua">Project summary page @ SourceForge</a>
+        | <a href="https://sourceforge.net/apps/phpbb/digua/">Forum</a>
+        | <a href="https://sourceforge.net/apps/mantisbt/digua/">Bug Reports and Feature Requests</a>
+    </p>
+
+</div>
+
+</body>
+</html>

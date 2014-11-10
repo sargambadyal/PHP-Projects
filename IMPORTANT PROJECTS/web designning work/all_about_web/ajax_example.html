@@ -1,0 +1,17 @@
+<script type="text/javascript">
+$(document).ready(function(){
+  personObj=new Object();
+  personObj.firstname="John";
+  personObj.lastname="Doe";
+  personObj.age=50;
+  personObj.eyecolor="blue"; 
+ 
+  $("button").click(function(){
+    $("#mydiv").text($.param(personObj));
+  });
+});
+</script>
+
+<div id="mydiv">
+	
+</div>

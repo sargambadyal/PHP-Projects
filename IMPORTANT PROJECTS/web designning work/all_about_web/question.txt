@@ -1,0 +1,22 @@
+1. MAKE A FIXED WIDTH(900 px) WEB PAGE with minimum height of 600px -- Page should be aligned at center
+2. A Page should have a logo about your company of height 100 px and logo should not be skewed.
+3. The Page should have 3 links to different pages(see point 7 onwards) about your company in one line.
+Links should change their background colour to grey when hovered over (should otherwise have a black background) and they should not be underlined and 
+should not have any border. 
+4. Pages should be search engine optimized.
+6. Each Page should have a background image of image_file.jpg such that how long may be the content trees shoul always remain at bottom.
+7. First Page should be a home page that should contain an image of 900 px about company
+and text about company in content box
+8. The second page should containt key points about company's mission using the hand-pointer before every key point. Font should be green in color.
+Should have 11 key points (any crap is acceptable)
+9. The third page should be apply for job form(left side) which should ask for name , age , sex of user(default male).It should give option to upload the resume to user.The form
+data should be submitted to http://resume.com/submitmyjob.php
+10. This page should also have company's address also on (right side) in a rounded box of radius 10px with dark green background colour and suitable font colour.
+11. On this page show
+Since your company is located in jalandhar with google map as following.Show this map on your website's home page
+http://maps.google.com/maps?f=q&amp;source=s_q&amp;hl=en&amp;geocode=&amp;q=jalandhar&amp;aq=&amp;sll=37.0625,-95.677068&amp;sspn=40.59616,79.013672&amp;ie=UTF8&amp;hq=&amp;hnear=Jalandhar,+Punjab,+India&amp;z=12&amp;ll=31.3256,75.5792&amp;output=embed
+11. Each page should have copyright link mentioning year and made by your name <link to your blog or fb profile> as footer
+12. Use The contact us button to link to some page.The button should appear at bottom-right corner of page
+
+
+

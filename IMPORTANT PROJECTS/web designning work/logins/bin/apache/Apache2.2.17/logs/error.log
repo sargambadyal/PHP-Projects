@@ -1,0 +1,23 @@
+Starting the Apache2.2 service
+The Apache2.2 service is running.
+No JkLogFile defined in httpd.conf. Using default C:/httpd-2.2-x64/logs/mod_jk.log
+[Sun Oct 24 13:49:28 2010] [notice] ModSecurity for Apache 2.1.1 configured - Apache/2.2.17 (Win32) mod_auth_sspi/1.0.4 mod_jk/1.2.28
+[Sun Oct 24 13:49:29 2010] [warn] No JkLogFile defined in httpd.conf. Using default C:/httpd-2.2-x64/logs/mod_jk.log
+[Sun Oct 24 13:49:29 2010] [notice] Apache/2.2.17 (Win32) mod_auth_sspi/1.0.4 mod_jk/1.2.28 Private Server 123 mod_fcgid/2.3.1 configured -- resuming normal operations
+[Sun Oct 24 13:49:29 2010] [notice] Server built: Oct 24 2010 13:33:15
+[Sun Oct 24 13:49:29 2010] [notice] Parent: Created child process 2676
+[Sun Oct 24 13:49:30 2010] [warn] No JkLogFile defined in httpd.conf. Using default C:/httpd-2.2-x64/logs/mod_jk.log
+[Sun Oct 24 13:49:30 2010] [notice] ModSecurity for Apache 2.1.1 configured - Apache/2.2.17 (Win32) mod_auth_sspi/1.0.4 mod_jk/1.2.28
+[Sun Oct 24 13:49:31 2010] [warn] No JkLogFile defined in httpd.conf. Using default C:/httpd-2.2-x64/logs/mod_jk.log
+[Sun Oct 24 13:49:31 2010] [notice] Child 2676: Child process is running
+[Sun Oct 24 13:49:31 2010] [notice] Child 2676: Acquired the start mutex.
+[Sun Oct 24 13:49:31 2010] [notice] Child 2676: Starting 64 worker threads.
+[Sun Oct 24 13:49:31 2010] [notice] Child 2676: Starting thread to listen on port 80.
+[Sun Oct 24 13:49:52 2010] [error] [client 127.0.0.1] File does not exist: C:/httpd-2.2-x64/htdocs/favicon.ico
+[Sun Oct 24 13:50:28 2010] [error] [client 127.0.0.1] File does not exist: C:/httpd-2.2-x64/htdocs/favicon.ico
+[Sun Oct 24 13:50:41 2010] [notice] Parent: Received shutdown signal -- Shutting down the server.
+[Sun Oct 24 13:50:41 2010] [notice] Child 2676: Exit event signaled. Child process is ending.
+[Sun Oct 24 13:50:42 2010] [notice] Child 2676: Released the start mutex
+[Sun Oct 24 13:50:43 2010] [notice] Child 2676: All worker threads have exited.
+[Sun Oct 24 13:50:44 2010] [notice] Child 2676: Child process is exiting
+[Sun Oct 24 13:50:44 2010] [notice] Parent: Child process exited successfully.

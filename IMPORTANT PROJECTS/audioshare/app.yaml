@@ -1,0 +1,22 @@
+application: metal-force-575
+version: 1
+runtime: php
+api_version: 1
+
+handlers:
+- url: /.*
+  script: index.php
+
+- url: /.*
+  script: login.php
+
+- url: /default.css
+  static_files: /\1.css
+  upload: /default.css
+
+
+- url: /generic.css
+  static_files: /\1.css
+  upload: /generic.css
+
+

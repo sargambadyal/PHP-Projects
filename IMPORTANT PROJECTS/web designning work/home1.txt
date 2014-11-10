@@ -1,0 +1,10 @@
+<HTML.>
+<HEAD>
+<TITLE>lecture 1</TITLE>
+</HEAD>
+<body>
+<H1><B><FONT FACE="COMIC SANS MS"><FONT COLOR="black"><CENTER>this is my home page</H1></B></FONT FACE></FONT COLOR></CENTER>
+
+ <A HREF="home1.html">home</a> <A HREF="red.html">red</a> <A HREF="green.html"></a> <A HREF="blue.html">blue</a>
+</BODY>
+</HTML>

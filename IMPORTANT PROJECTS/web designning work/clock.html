@@ -1,0 +1,44 @@
+<html>
+	<head>
+	<script type="text/javascript">
+
+	//alert(s);
+    function mytimer()
+	{
+	var today=new Date();
+	//alert( today );
+	var h=today.getHours();
+	//alert(h);
+	var m=today.getMinutes();
+	//alert(m);
+	var s=today.getSeconds();
+	document.getElementById('myclock').innerHTML= h + ":" + m + ":" + s;// refreshes the content of the element
+	mytimer();
+	}
+	
+	function mytimer()
+	{
+	var today=new Date();
+	//alert( today );
+	var h=today.getHours();
+	//alert(h);
+	var m=today.getMinutes();
+	//alert(m);
+	var s=today.getSeconds();
+	document.getElementById('myclock').innerHTML= h + ":" + m + ":" + s;// refreshes the content of the element
+	setTimeout('mytimer()',900);
+	}
+	
+	
+	
+	// independent clock
+	//p id=myclock
+	//timer document.getelmyclock.innerelement
+	
+	</script>
+	</head>
+		<body onload="mytimer()">
+		<p id="myclock">
+		</p>
+		</body>
+</html>			

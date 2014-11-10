@@ -1,0 +1,58 @@
+/*Css Grouping And Nesting */
+
+/*Css height : Auto */
+
+/*Css max min height width*/
+
+
+
+/*CSS li - display inline and block */
+
+/* Visible and display important difference */
+
+
+/*Block Element  And Inline Element*/
+A block element is an element that takes up the full width available, and has 
+
+a line break before and after it.
+
+Examples of block elements:
+
+<h1>
+<p>
+<div>
+An inline element only takes up as much width as necessary, and does not force 
+
+line breaks.
+
+Examples of inline elements:
+
+<span>
+<a> 
+
+/* CSs position fixed : feedback example */
+
+/* CSS z-index example */
+/*img
+{
+position:absolute;
+left:0px;
+top:0px;
+z-index:-1;
+}*/
+
+/* overflow property of div */
+
+/*change cursor  pointer help*/
+
+
+
+/* CSS Float example and CSS navigation example */
+
+/* CSS opacity*/
+opacity:0.4;filter:alpha(opacity=40)
+
+
+/*HTML title attribute*/
+
+/*Css media screen , print  , etc. etc.

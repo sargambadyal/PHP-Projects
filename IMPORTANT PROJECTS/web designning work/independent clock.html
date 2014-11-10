@@ -1,0 +1,59 @@
+<html>
+	<head>
+	<script type="text/javascript">
+
+
+
+function mytimer()
+	{
+	var today=new Date();
+	//alert( today );
+	var h=today.getHours();
+	//alert(h);
+	var m=today.getMinutes();
+	//alert(m);
+	var s=today.getSeconds();
+	//document.getElementById('myclock').innerHTML= h + ":" + m + ":" + s;
+	//document.write( mytimer())}
+	// refreshes the content of the element
+	for(i=s;i<=60;i++)
+	{if(i<60)
+	{
+	s=s+1;
+	document.getElementById('myclock').innerHTML= h + ":" + m + ":" + s;
+	setTimeout(h+':'+m+':'+s,900);}
+	else
+	{i=0;
+	m++;
+	for(j=m;j<=60;j++)
+	{if(j<60)
+	{
+	m=m+1;
+	document.getElementById('myclock').innerHTML= h + ":" + m + ":" + s;
+	setTimeout(h+':'+m+':'+s,900);}
+	else
+	{j=0;
+	h++;
+	for(k=h;k<=24;k++)
+	{if(k<24)
+	{
+	h=h+1;
+	document.getElementById('myclock').innerHTML= h + ":" + m + ":" + s;
+	setTimeout(h+':'+m+':'+s,900);}
+	else
+	k=0;
+	
+	
+	}
+	}
+    }
+	}
+	}
+	}
+	</script>
+	</head>
+		<body onload="mytimer()">
+		<p id="myclock">
+		</p>
+		</body>
+</html>			

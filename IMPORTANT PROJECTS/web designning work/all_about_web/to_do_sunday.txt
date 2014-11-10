@@ -1,0 +1,735 @@
+
+-----------------------JS Timing ---------
+var t=setTimeout("javascript statement",milliseconds);
+cleartimeout(t)
+making counter
+--------------JS Date-------
+var today=new Date();
+var h=today.getHours();
+var m=today.getMinutes();
+var s=today.getSeconds();
+------------------------------------------------
+
+Javascript And DOM
+<form id="myform" action="" >
+<input elll
+...
+
+
+</form>
+
+-----Form Validation -------------
+document.getElementById("myform").submit();
+
+-----------JS Style Change , innerHTML for content change------------
+
+y=getbyid()
+
+
+---------------JS Code Encryption and minification--------------
+http://www.atasoyweb.net/Javascript_Encrypter/javascript_encrypter_eng.php
+http://closure-compiler.appspot.com/home
+Digua
+
+
+
+
+--------JS Clock----------------Exercise
+<html>
+<head>
+<script type="text/javascript">
+function startTime()
+{
+var today=new Date();
+var h=today.getHours();
+var m=today.getMinutes();
+var s=today.getSeconds();
+// add a zero in front of numbers<10
+m=checkTime(m);
+s=checkTime(s);
+document.getElementById('txt').innerHTML=h+":"+m+":"+s;
+t=setTimeout('startTime()',500);
+}
+
+function checkTime(i)
+{
+if (i<10)
+  {
+  i="0" + i;
+  }
+return i;
+}
+</script>
+</head>
+
+<body onload="startTime()">
+<div id="txt"></div>
+</body>
+</html>
+
+
+---------------------JQUERY (Write Less do more library)--------------------------------
+
+
+jQuery is a library of JavaScript Functions.
+
+jQuery is a lightweight "write less, do more" JavaScript library.
+
+Cross Browser Compatibility
+
+
+
+The jQuery library contains the following features:
+
+HTML element selections
+HTML element manipulation
+CSS manipulation
+HTML event functions
+JavaScript Effects and animations
+HTML DOM traversal and modification
+AJAX
+Utilities
+Is extensible -- Plugins
+hides various browser quirks
+
+
+
+
+---------More About JavaScript (Objects) That You Need To Know before diving into jquery-----------
+
+A.1 JavaScript Object fundamentals
+
+/* creating a new object in javascript */
+
+var ride = new Object();
+ride.make = 'Yamaha';
+ride.model = 'V-Star Silverado 1100';
+ride.year = 2005;
+ride.purchased = new Date(2005,3,12);
+
+
+
+
+var x = new Object();
+
+x.name = 'Spike Spiegel';
+x.occupation = 'bounty hunter';
+x.address="Gurdwara JO bole sonihal"
+
+ride.owner = x;
+
+----------------Object Notation In Javascript -------------------
+var ride = {
+make: 'Yamaha',
+model: 'V-Star Silverado 1100',
+year: 2005,
+purchased: new Date(2005,3,12),
+owner: {
+name: 'Spike Spiegel',
+occupation: 'bounty hunter'
+owner_bod: new Date(1940,7,7)
+}
+};
+
+Using an object literal, this fragment creates the same ride object that we built up
+with assignment statements in the previous section.
+This notation, which has come to be termed JSON (JavaScript Object Notation),
+is much preferred by most page authors over the multiple-assignment
+means of object building. Its structure is simple; an object is denoted by a matching
+pair of braces, within which properties are listed delimited by commas. Each
+property is denoted by listing its name and value separated by a colon character.
+
+
+-------------objects as properties of windows object--------------------
+
+
+When the var keyword is used at the top level, outside the body of any containing
+function, it’s only a programmer-friendly notation for referencing a property
+of the pre-defined JavaScript window object. Any reference made in top-level
+scope is implicitly made on the window instance.
+This means that all of the following statements are equivalent:
+var foo = bar;
+and
+window.foo = bar;
+and
+foo = bar;
+
+-----------------Objects Summary -----------------------
+¦ A JavaScript object is an unordered collection of properties.
+¦ Properties consist of a name and a value.
+¦ Objects can be declared using object literals.
+¦ Top-level variables are properties of window.
+
+
+
+----------------More About Functions in Javascript----------------------
+ ---------------------------------------FUNCTION IS AN OBJECT In Javascript-------------------------------
+ In many traditional OO languages, objects can contain data, and they can possess
+methods. In these languages the data and the methods are usually distinct concepts;
+JavaScript walks a different path.
+Functions in JavaScript are considered objects like any of the other object
+types that are defined in JavaScript, such as Strings, Numbers, or Dates. Like
+other objects, functions are defined by a JavaScript constructor—in this case
+Function—and can be
+¦ Assigned to variables
+¦ Assigned as a property of an object
+¦ Passed as a parameter
+¦ Returned as a function result
+¦ Created using literals
+Because functions are treated in the same way as other objects in the language, we
+say that functions are first-class objects.
+
+But you might be thinking to yourself that functions are fundamentally different
+from other object types like String or Number because they possess not only a
+value (in the case of a Function instance, its body) but also a name.
+Well, not so fast!
+
+
+
+-----------Function Literals--------
+
+
+
+function doSomethingWonderful() {
+alert('does something wonderful');
+}
+
+“Doesn’t that create a function named doSomethingWonderful?”
+No, it doesn’t. Although that notation may seem familiar and is ubiquitously
+used to create top-level functions, it’s the same syntactic sugar used by var to create
+window properties. The function keyword automatically creates a Function
+instance and assigns it to a window property created using the function “name”
+(what we referred to earlier as a Jedi mind trick) as in the following:
+
+doSomethingWonderful = function() {
+alert('does something wonderful');
+}
+
+If that looks weird to you, consider another statement using the exact same format,
+except this time using a Number literal:
+aWonderfulNumber = 213;
+
+------------------ALL ARE SAME-----------------------------
+
+function hello(){ alert('Hi there!'); }
+hello = function(){ alert('Hi there!'); }
+window.hello = function(){ alert('Hi there!'); }
+
+
+
+-----------------------------ASSIGNING FUNCTION AS PROPERTY OF OBJECT Example---------------------------
+var ride = {
+make: 'Yamaha',
+model: 'V-Star Silverado 1100',
+year: 2005,
+purchased: new Date(2005,3,12),
+owner: {name: 'Spike Spiegel',occupation: 'bounty hunter'},
+whatAmI: function() {return this.year+' '+this.make+' '+this.model ;
+}
+};
+
+
+
+--------------------------------------------------------------------------------
+
+
+-----------------------CALL BACK FUNCTIONS--------------------
+
+ASYNCHROUS PROGRAMMING
+
+----------EXAMPLE OF CALL BACK FUNCTIONS----------------
+
+Let’s consider the following code:
+function hello() { alert('Hi there!'); }
+setTimeout(hello,5000);
+We declare a function named hello and set a timer to fire in 5 seconds, expressed
+as 5000 milliseconds by the second parameter. In the first parameter to the set-
+Timeout() method, we pass a function reference. Passing a function as a parameter
+is no different than passing any other value—just as we passed a Number in the
+second parameter.
+When the timer expires, the hello function is called. Because the setTimeout()
+method makes a call back to a function in our own code, that function is
+termed a callback function.
+
+
+
+
+
+------------aNONYMOUS fUNCTIONS kIND OF A THINGY ----------------
+
+setTimeout(function() { alert('Hi there!'); },5000);
+
+
+------------------THE THIS IN JAVASCRIPT AND CONTEXT OF FUNCTION-------------------------------
+
+
+
+
+
+Context Of the Function Example
+<html>
+<head>
+<title>Function Context Example</title>
+<script type="text/javascript">
+
+var o1 = {handle:'o1'};
+var o2 = {handle:'o2'};
+var o3 = {handle:'o3'};
+
+window.handle = 'window';
+
+
+function whoAmI() {
+return this.handle;
+}
+
+
+o1.identifyMe = whoAmI;
+
+
+alert(whoAmI());
+
+alert(o1.identifyMe());
+
+
+
+alert(whoAmI.call(o2));
+
+alert(whoAmI.apply(o3));
+
+</script>
+</head>
+<body>
+</body>
+</html>
+
+
+
+
+Function is not the method of an object.
+
+A function f acts as a method of object o when o serves as the function context of the
+invocation of f.
+
+
+---------------------------CLOSURES------------------------
+
+Stated as simply as possible, a closure is a Function instance coupled with the
+local variables from its environment that are necessary for its execution.
+
+Closure Example if interested
+<html>
+<head>
+<title>Closure Example</title>
+<script type="text/javascript"
+src="../scripts/jquery-1.2.js"></script>
+<script>
+$(function(){
+var local = 1;
+window.setInterval(function(){
+$('#display')
+.append('<div>local</div>');
+local++;
+},3000);
+});
+</script>
+</head>
+<body>
+<div id="display"></div>
+</body>
+</html>
+
+-----------------------------------------------Now Ready To Do Jquery---------------------------
+
+Using Jquery file 
+
+jQuery Syntax
+
+The jQuery syntax is tailor made for selecting HTML elements and perform some action on the element(s).
+
+
+Basic syntax is: $().action()
+
+A dollar sign to define jQuery
+A (selector) to "query (or find)" HTML elements
+A jQuery action() to be performed on the element(s)
+
+------------The Document Ready Function-----------------
+
+This is to prevent any jQuery code from running before the document is finished loading (is ready).
+
+Here are some examples of actions that can fail if functions are run before the document is fully loaded:
+
+Trying to hide an element that doesn't exist
+Trying to get the size of an image that is not loaded
+
+
+$ jquery
+
+
+
+
+Example
+
+
+$("form li.a").
+ 
+$(document).ready(function(){
+    $("p").hide();
+  });
+  
+
+
+
+
+----------------------------Jquery selectors And Filters (Query Part Of Jquery)
+
+
+Selectors return an array of objects that match selection criteria
+
+Filters operate on selectors for filtering
+
+Array is not set of DOM elements but collection of jquery objects because...............
+
+further functions it can provide
+
+bunch of convinience functions
+
+$(selector).action
+
+$(".class")
+
+$("#id")
+
+$("li.a");
+
+
+
+$(selector1 , selector2) -------- grouping selectors
+
+$("p") selects all <p> elements.
+
+$("p.intro") selects all <p> elements with class="intro".
+
+$("p#demo") selects all <p> elements with id="demo".
+
+
+
+
+
+
+
+--------------Jquery Filters --------------------
+
+
+1 basic 
+2. content
+3. visibility
+4. child
+5.attribute
+6.form
+
+first , last , even , odd
+:first
+:last
+
+
+$("p:first")
+
+
+
+-----------------------------Attribute Selectors
+
+jQuery Attribute Filters
+
+jQuery uses XPath expressions to select elements with given attributes.
+
+$("[href]") select all elements with an href attribute.
+
+$("[href='#']") select all elements with an href value equal to "#".
+
+$("[href!='#']") select all elements with an href attribute NOT equal to "#".
+
+$("[href^='cde']") select all elements with an href attribute that ends with ".jpg".
+
+[attribute^=]  starts with
+
+$("p[id=para]")
+
+----------content visibility
+
+:contains(3)
+:visible
+
+
+------------------Form Based Filters---------------------
+
+:input
+:text
+:radio
+:checkbox
+:file
+:submit
+:button
+:reset
+
+:enabled
+:disabled
+:checked
+:selected
+
+$("form :checkbox:checked")
+
+
+
+---------------------Traverse Dom Using Jquery------------
+
+$("selector").get() --------gets dom elements
+
+length ---------- how many paragraphs are there
+
+each() --------- traverse entire matched result set
+
+
+
+-------------------------Manipulating HTML Content Using Jquery-------------------------
+
+
+
+
+Creating html content $("pass html")
+
+var x = $("<p>LOL</p>");
+
+x is now new dom element
+
+
+$(#myclock).html);
+
+html() ---- returns html content of first matched element
+
+html(newcontent) ----- sets html content for all elements
+
+---------same for text------------
+
+if you pass html to text it will be outputted as text only
+
+
+
+
+
+
+
+
+
+---------------------------Manipulating Attributes-------------------------
+
+        //$("a").attr("target", "_blank");
+
+        //$("a").removeAttr("href");
+
+        //$("img").attr({ src: "images/Spring.jpg", alt: "spring" }); --- set group of attributes
+
+		
+------------Inserting Content In Document Or Modifying DOM Tree-----------------------
+
+
+			//append(content) to every matched element similar to after
+        //$("p").append(" with some content appended");
+			//before every matched element
+        //$("p").prepend("Hello! ");
+		      //append to selectors 
+        //$("p:last").appendTo("p:first");
+        //$("p:last").prependTo("p:first");
+
+
+
+
+
+------------------Wrapping--------------------
+
+				//////wraps each element
+        //$("p").wrap("<div style='color:red'/>");
+				///////wraps all ements
+        //$("p").wrapAll("<div style='border:3px solid red'/>");
+			//removes all child nodes
+		//$("ul").empty();
+		
+-------------------------Jquery CSS-------------------------
+
+$(selector).css(properties) --------properties JSON notation	
+		
+		
+--------------------Jquery CSS classes function sizing function---------------
+
+addclass
+removeclass
+toggleclass
+
+
+--------------------JQUERY EVENTS--------------------------------------------
+
+Easier than DOM
+IE SUCKS AS USUAL
+ASSIGNING EVENTS USING SELECTORS
+UNIFIED EVENT OBJECT IN CROS  BROWSER WAY
+HELpER routines cross browser
+
+-----------binding events--------------
+
+$("selector").bind(event, data, handler)
+//event like click etc.
+//handler ======= handler function always takes evt parameter
+
+$("selector").unbind(event, data, handler)
+
+
+-----------------HElper event functions-------------
+
+click(fn)
+hover(fnover,fn out)
+toggle(fn1,fn2,fn3...)
+
+
+---------jquery event object unification ----------------
+
+---------miscellaneous event functions--------
+
+trigger event -- make browser do
+
+triggerhandler ----- first matched
+
+
+
+------------------JQUERY ANIMATIONS AND EFFECTS BYE BYE FLASH----------------------
+
+
+
+
+
+----------------------JQUERY UI WILL DO SOOON :) ------------------
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+		
+		
+		
+		
+		
+		
+
+
+
+
+		
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+document.ready event ------- when dom is ready
+
+
+
+
+
+
+
+google available https://ajax.googleapis.com/ajax/libs/jquery/1.6.1/jquery.min.js
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,34 @@
+#back{
+background-image:url(back.jpg);
+background-attachment:fixed;
+opacity:1;}
+
+#wrapper{
+margin: 0 auto;
+background-color:#000;
+opacity:.8;
+width:670px;
+height:1000px;
+-webkit-border-radius:30px;
+}
+.div1{
+float:left;width:200px; height:200px;
+}  
+.div2{
+float:left;width:270x; height:200px;
+}  
+.div3{
+float:right;width:200px; height:200px;
+}  
+.image{
+width:150px;
+height:150px;
+} 
+.image1{
+width:270px;
+}
+.obj1{
+color:#abc;
+font-family:verdana;
+}
+	

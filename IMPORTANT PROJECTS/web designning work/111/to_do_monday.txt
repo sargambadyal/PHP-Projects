@@ -1,0 +1,189 @@
+
+
+
+
+------------CSS Visibility And Display----------------
+
+
+
+-----------jquery statement chaining---------
+
+
+
+-------------------------Manipulating HTML Content Using Jquery-------------------------
+
+
+
+
+Creating html content $("pass html")
+
+var x = $("<p>LOL</p>");
+
+x is now new dom element
+
+
+
+$(#myclock).html);
+
+html() ---- returns html content of first matched element
+
+html(newcontent) ----- sets html content for all elements
+
+---------same for text------------
+
+if you pass html to text it will be outputted as text only
+
+---------------------------Manipulating Attributes-------------------------
+
+        //$("a").attr("target", "_blank");
+
+        //$("a").removeAttr("href");
+		
+        //$("img").attr({ src: "images/Spring.jpg", alt: "spring" }); --- set group of attributes
+
+		
+------------Inserting Content In Document Or Modifying DOM Tree-----------------------
+
+
+			//append(content) to every matched element similar to after
+        //$("p").append(" with some content appended");
+			//before every matched element
+        //$("p").prepend("Hello! ");
+		      //append to selectors 
+        //$("p:last").appendTo("p:first");
+        //$("p:last").prependTo("p:first");
+
+
+
+------------------Wrapping--------------------
+
+				//////wraps each element
+        //$("p").wrap("<div style='color:red'/>");
+				///////wraps all ements
+        //$("p").wrapAll("<div style='border:3px solid red'/>");
+			//removes all child nodes
+		//$("ul").empty();
+		
+-------------------------Jquery CSS-------------------------
+
+$(selector).css(properties) --------properties JSON notation	
+				
+		
+		
+--------------------Jquery CSS classes function sizing function---------------
+
+
+
+addclass
+removeclass
+toggleclass
+
+
+--------------------JQUERY EVENTS--------------------------------------------
+
+Easier than DOM
+IE SUCKS AS USUAL
+ASSIGNING EVENTS USING SELECTORS
+UNIFIED EVENT OBJECT IN CROS  BROWSER WAY
+HELpER routines cross browser
+
+-----------binding events--------------
+
+$("selector").bind(event, data, handler)
+//event like onclick etc.
+//handler ======= handler function always takes evt parameter
+$("selector").unbind(event, data, handler)
+
+
+-----------------HElper event functions-------------
+
+click(fn)
+hover(fn over,fn out)
+toggle(fn1,fn2,fn3...)
+
+---------jquery event object unification ----------------
+
+---------miscellaneous event functions--------
+
+trigger event -- make browser do
+
+triggerhandler ----- first matched
+
+
+------------------Animation-----------------
+hide , show , showing , hiding , elements , fade in , fade out
+
+$(selector).show(5000,function(){
+	alert('lol');
+});
+
+fadein(speed,callback)
+
+fadeout(speed,callback)
+
+fadeto(speed,opacity,callback)
+
+--sliding
+slideup(speed,callback)
+
+slidedown(speed,callback)
+
+slidetoggle(speed,callback)
+
+--custom animation
+
+
+animate(params,duration,linear,swing)
+
+animate(params,options) ----- options in json
+
+stops ---- stops elements
+
+
+------------Jquery UI -----------------------------
+
+
+
+interaction eidgets effects
+
+interactions ------- draggable,droppable,resizable,selectable,sortable
+
+widgets - accordian,date picker, progress bar, dialog, slider, tabs
+
+effects - add remove toggle switch class  color animation
+
+-------Jquery Utility functions-----
+
+$.each, $.trim
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

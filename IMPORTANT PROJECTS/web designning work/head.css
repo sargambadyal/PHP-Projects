@@ -1,0 +1,68 @@
+#myheading{ 
+font-size: 20px;
+color:#f00;
+}
+.myclass1{ 
+color:#0f0;
+font: verdana;
+}
+
+.myclass2{
+font-size:40px;
+background-image: url('vitf.png')
+}
+
+.myclass3{
+ background-image: url('blue_angel_001.jpg');
+ }
+ .myclass4{
+font-size:40px;
+background-image: url('redborder.jpg');
+background-repeat: repeat-x;
+}
+ .myclass5{
+font-size:40px;
+background-image: url('redborder.jpg');
+background-repeat: repeat-y;
+}
+body{
+background-image: url('redbox.png');
+background-attachment:fixed;
+background-repeat: no-repeat;
+word-spacing:13px;
+}
+h1{
+text-decoration: line-through;
+text-transform: uppercase;
+text-indent: 25px;
+letter-spacing:10px;
+}
+
+a:hover{
+background-color:#f00;
+color:#fff;
+}
+
+
+p{
+border-width: 10px;
+border-style:dashed;
+border-color:#000;
+background-color:#0f0;
+margin:10px;
+padding:5 10px;
+color:#f78f79;
+}
+img{
+border-width:10px;
+border-style:solid;
+border-color:#00f;
+}
+h2{
+}
+font{color:#f78f79;
+
+}
+/*psudoclasses link*/
+
+

@@ -1,0 +1,408 @@
+What is JavaScript?
+
+JavaScript was designed to add interactivity to HTML pages
+JavaScript is a scripting language
+A scripting language is a lightweight programming language
+JavaScript is usually embedded directly into HTML pages
+JavaScript is an interpreted language (means that scripts execute without preliminary compilation)
+Everyone can use JavaScript without purchasing a license
+
+
+Are Java and JavaScript the same?
+No
+
+Advantages:
+JavaScript gives HTML designers a programming tool - HTML authors are normally not programmers, but JavaScript is a scripting language with a very simple syntax! Almost anyone can put small "snippets" of code into their HTML pages
+JavaScript can put dynamic text into an HTML page - A JavaScript statement like this: document.write("<h1>" + name + "</h1>") can write a variable text into an HTML page
+JavaScript can react to events - A JavaScript can be set to execute when something happens, like when a page has finished loading or when a user clicks on an HTML element
+JavaScript can read and write HTML elements - A JavaScript can read and change the content of an HTML element
+
+
+<script type="text/javascript">
+document.write("<p>" + Hello World + "</p>");
+alert('LOL');
+</script>
+
+
+
+
+In body in head in external file
+<script type="text/javascript" src="xxx.js"></script>
+Remember to place the script exactly where you normally would write the script!
+
+
+--------JavaScript is a sequence of statements to be executed by the browser.---------
+
+--------JavaScript is Case Sensitive
+
+Unlike HTML, JavaScript is case sensitive - therefore watch your capitalization closely when you write JavaScript statements, create or call variables, objects and functions.
+
+--------JavaScript Statements
+
+A JavaScript statement is a command to a browser. The purpose of the command is to tell the browser what to do.
+
+This JavaScript statement tells the browser to write "Hello Dolly" to the web page:
+
+document.write("Hello Dolly");
+It is normal to add a semicolon at the end of each executable statement. Most people think this is a good programming practice, and most often you will see this in JavaScript examples on the web.
+
+The semicolon is optional (according to the JavaScript standard), and the browser is supposed to interpret the end of the line as the end of the statement. Because of this you will often see examples without the semicolon at the end.
+
+--------Note: Using semicolons makes it possible to write multiple statements on one line.
+
+
+
+Declaring (Creating) JavaScript Variables
+
+Creating variables in JavaScript is most often referred to as "declaring" variables.
+
+You declare JavaScript variables with the var keyword:
+
+LOCAL AND GLOBAL VARIABLES
+
+If you declare a variable, without using "var", the variable always becomes GLOBAL.
+
+JavaScript plus operator for concatenation
+
+
+var x;
+x=5+5;
+document.write(x);
+document.write("<br />");
+x="5"+"5";
+document.write(x);
+document.write("<br />");
+x=5+"5";
+document.write(x);
+document.write("<br />");
+x="5"+5;
+document.write(x);
+document.write("<br />");
+
+------JS if else
+
+-------JS SWITCH
+var d=new Date();
+var theDay=d.getDay();
+switch (theDay)
+{
+case 5:
+  document.write("Finally Friday");
+  break;
+case 6:
+  document.write("Super Saturday");
+  break;
+case 0:
+  document.write("Sleepy Sunday");
+  break;
+default:
+  document.write("I'm looking forward to this weekend!");
+}
+
+
+---------alert box
+-------confirm box 
+
+var r=confirm("Press a button");
+if (r==true)
+  {
+  alert("You pressed OK!");
+  }
+else
+  {
+  alert("You pressed Cancel!");
+  }
+  
+  
+----------prompt box 
+  
+  prompt("sometext","defaultvalue");
+  
+  -------JS for loop
+  
+  --------JS while loop
+  
+  -------JS break
+  
+  -------JS for in loops used to loop through properties of object
+  
+ var car={name:"hummer",class:"SUV",price:4000000}; 
+
+for (x in car)
+{
+document.write(car[x] + " ");
+}
+
+-------Events In Javascript
+
+By using JavaScript, we have the ability to create dynamic web pages. Events are actions that can be detected by JavaScript.
+
+Every element on a web page has certain events which can trigger a JavaScript. For example, we can use the onClick event of a button element to indicate that a function will run when a user clicks on the button. We define the events in the HTML tags.
+
+Examples of events:
+
+A mouse click
+A web page or an image loading
+Mousing over a hot spot on the web page
+Selecting an input field in an HTML form
+Submitting an HTML form
+A keystroke
+Note: Events are normally used in combination with functions, and the function will not be executed before the event occurs!
+
+-----------Events-----------
+1.onblur The onblur event occurs when an object loses focus.
+
+<script type="text/javascript">
+function upperCase()
+{
+var x=document.getElementById("fname").value
+document.getElementById("fname").value=x.toUpperCase()
+}
+</script>
+</head>
+<body>
+
+Enter your name: <input type="text" id="fname" onblur="upperCase()">  
+  
+2.onchange ------- on change of context
+<script type="text/javascript">
+function upperCase(x)
+{
+var y=document.getElementById(x).value
+document.getElementById(x).value=y.toUpperCase()
+}
+</script>
+</head>
+<body>
+
+Enter your name:
+<input type="text" id="fname"
+onchange="upperCase(this.id)">  
+  
+3.onfocus when element gains focus
+<script type="text/javascript">
+function setStyle(x)
+{
+document.getElementById(x).style.background="yellow"
+}
+</script>
+</head>
+<body>
+
+First name: <input type="text"
+onfocus="setStyle(this.id)" id="fname">
+<br />
+Last name: <input type="text"
+onfocus="setStyle(this.id)" id="lname">  
+  
+4.oneydown,onkeypress,onkeyup
+
+onmousemove	The mouse is moved
+onmouseout	The mouse is moved off an element	
+onmouseover	The mouse is moved over an element
+onmouseup	A mouse button is released	
+onresize	A window or frame is resized
+onselect	Text is selected	
+onunload	The user exits the page  
+  
+
+--------------Event attrubutes
+altKey	Returns whether or not the "ALT" key was pressed when an event was triggered	
+button	Returns which mouse button was clicked when an event was triggered	0-left 1-middle 2-right
+Note: For left-handed configured mice the button parameter values are reversed.
+clientX	Returns the horizontal coordinate of the mouse pointer when an event was triggered	
+clientY	Returns the vertical coordinate of the mouse pointer when an event was triggered	
+ctrlKey	Returns whether or not the "CTRL" key was pressed when an event was triggered	
+metaKey	Returns whether or not the "meta" key was pressed when an event was triggered	
+relatedTarget	Returns the element related to the element that triggered the event	No	
+screenX		Returns the horizontal coordinate of the mouse pointer when an event was triggered	
+screenY		Returns the vertical coordinate of the mouse pointer when an event was triggered
+shiftKey	Returns whether or not the "SHIFT" key was pressed when an event was triggered
+
+---------------Ques Prevent copy paste from website---------------
+
+
+---------Event Bubbling-------
+The bubbles event attribute returns a Boolean value that indicates whether or not the event is a bubbling event.
+
+Event bubbling directs an event to its intended target, it works like this:
+
+A button is clicked and the event is directed to the button
+If an event handler is set for that object, the event is triggered
+If no event handler is set for that object, the event bubbles up (like a bubble in water) to the objects parent
+The event bubbles up from parent to parent until it is handled, or until it reaches the document object
+
+
+------------------JS special text
+\'	single quote
+\"	double quote
+\\	backslash
+\n	new line
+\r	carriage return
+\t	tab
+\b	backspace
+\f	form feed
+
+
+---------------JS and OOPS <properties,methods,objects>---------
+
+JS String object
+
+properties like length
+
+method like toUpperCase toLowerCase
+
+indexOf method example
+var str="Hello world!";
+document.write(str.indexOf("d") + "<br />");
+document.write(str.indexOf("WORLD") + "<br />");
+document.write(str.indexOf("world"));
+
+
+
+
+
+--JS Array----
+var myCars=new Array(); // regular array (add an optional integer
+myCars[0][0]="Maruti";       // argument to control array's size)
+myCars[0][1]="Safari";
+myCars[1][0]="Audi";
+----------------
+
+
+Math.random() --- generates number between zero and 1
+Math.floor() ---- floor function
+
+
+------JS COOKIES------
+A cookie is often used to identify a user.
+
+What is a Cookie?
+
+A cookie is a variable that is stored on the visitor's computer. Each time the same computer requests a page with a browser, it will send the cookie too. With JavaScript, you can both create and retrieve cookie values.
+
+Examples of cookies:
+
+Name cookie - The first time a visitor arrives to your web page, he or she must fill in her/his name. The name is then stored in a cookie. Next time the visitor arrives at your page, he or she could get a welcome message like "Welcome John Doe!" The name is retrieved from the stored cookie
+Password cookie - The first time a visitor arrives to your web page, he or she must fill in a password. The password is then stored in a cookie. Next time the visitor arrives at your page, the password is retrieved from the cookie
+Date cookie - The first time a visitor arrives to your web page, the current date is stored in a cookie. Next time the visitor arrives at your page, he or she could get a message like "Your last visit was on Tuesday August 11, 2005!" The date is retrieved from the stored cookie
+
+
+function setCookie(c_name,value,exdays)
+{
+var c_value=escape(value);
+document.cookie=c_name + "=" + c_value;
+}
+
+
+
+-------We will do in detail in PHP-----------
+
+
+--------JS Timing ---------
+var t=setTimeout("javascript statement",milliseconds);
+cleartimeout(t)
+making counter
+--------------JS Date-------
+var today=new Date();
+var h=today.getHours();
+var m=today.getMinutes();
+var s=today.getSeconds();
+------------------------------------------------
+
+Javascript And DOM
+
+-----Form Validation -------------
+document.getElementById("frm1").submit();
+
+-----------JS Style Change , innerHTML for content change------------
+
+y=getbyid()
+
+
+
+
+
+
+
+--------JS Clock----------------Exercise
+<html>
+<head>
+<script type="text/javascript">
+function startTime()
+{
+var today=new Date();
+var h=today.getHours();
+var m=today.getMinutes();
+var s=today.getSeconds();
+// add a zero in front of numbers<10
+m=checkTime(m);
+s=checkTime(s);
+document.getElementById('txt').innerHTML=h+":"+m+":"+s;
+t=setTimeout('startTime()',500);
+}
+
+function checkTime(i)
+{
+if (i<10)
+  {
+  i="0" + i;
+  }
+return i;
+}
+</script>
+</head>
+
+<body onload="startTime()">
+<div id="txt"></div>
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

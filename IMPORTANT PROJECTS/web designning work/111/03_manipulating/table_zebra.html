@@ -1,0 +1,82 @@
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+
+<title>Document</title>
+
+<script type="text/javascript" src="../jquery-1.3.2.js"></script>
+
+<script type="text/javascript">
+
+    $("document").ready(function() {
+
+			$("p:even").bind( "mouseover mouseleave", function(){
+		        $(this).toggleClass("c");
+		});
+		$("p:odd").bind( "mouseover mouseleave", function(){
+		        $(this).toggleClass("c");
+		});
+
+       
+        
+
+    });
+
+</script>
+
+<style type="text/css">
+
+.a { 
+border: 2px solid white;
+color:white;
+background:blue;
+width:400px;
+font-size:24px;
+
+ }
+
+.b { 
+border:2px solid white;
+color:white;
+background:red;
+width:400px;
+font-size:24px;
+position:relative;
+
+top:-20px;
+}
+.c { 
+border:3px solid red;
+color:black;
+background:green;
+width:400px;
+font-size:25px;
+}
+
+</style>
+
+</head>
+
+<body>
+
+	
+<p class="a">This is paragraph 1</p>
+
+<p class="b">This is paragraph 2</p>
+
+<p style="position:relative;
+
+top:-40px;" class="a">This is paragraph 3</p>
+
+<p style="position:relative;
+
+top:-60px;"class="b">This is paragraph 4</p>
+
+</body>
+
+</html>

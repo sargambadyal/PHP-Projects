@@ -1,0 +1,104 @@
+Question For Test
+
+1. MAKE A FIXED WIDTH(900 px) WEB PAGE with minimum height of 600px -- Page should be aligned at center
+2. A Page should have a logo about your company of height 100 px and logo should not be skewed.
+3. The Page should have 3 links to different pages(see point 7 onwards) about your company in one line.
+Links should change their background colour to grey when hovered over (should otherwise have a black background) and they should not be underlined and 
+should not have any border. 
+4. Pages should be search engine optimized.
+6. Each Page should have a background image of image_file.jpg such that how long may be the content trees shoul always remain at bottom.
+7. First Page should be a home page that should contain an image of 900 px about company
+and text about company in content box
+8. The second page should containt key points about company's mission using the hand-pointer before every key point. Font should be green in color.
+Should have 11 key points (any crap is acceptable)
+9. The third page should be apply for job form(left side) which should ask for name , age , sex of user(default male).It should give option to upload the resume to user.The form
+data should be submitted to http://resume.com/submitmyjob.php
+10. This page should also have company's address also on (right side) in a rounded box of radius 10px with dark green background colour and suitable font colour.
+11. On this page show
+Since your company is located in jalandhar with google map as following.Show this map on your website's home page
+http://maps.google.com/maps?f=q&amp%3Bsource=s_q&amp%3Bhl=en&amp%3Bgeocode&amp%3Bq=jalandhar&amp%3Baq&amp%3Bsll=37.0625%2C-95.677068&amp%3Bsspn=40.59616%2C79.013672&amp%3Bie=UTF8&amp%3Bhq&amp%3Bhnear=Jalandhar%2C+Punjab%2C+India&amp%3Bz=12&amp%3Bll=31.3256%2C75.5792&amp%3Boutput=embed
+11. Each page should have copyright link mentioning year and made by your name <link to your blog or fb profile> as footer
+12. Use The contact us button to link to some page.The button should appear at bottom-right corner of page
+
+404 Page
+www.resume.com
+Resume.com is a resume hosting and job service. Allow employers to view your resume no matter what platform they use and without any third party document readers.
+
+1. Hand pointer : http://postimage.org/image/j3espa5g/
+2. Background tree : http://postimage.org/image/j5kiyld0/
+3.Contact Us image : http://postimage.org/image/j62pvesk/
+View image: hand pointer
+
+@FONT-FACE
+font-face(RUPEE KE IMAGE)
+favorite icon 
+rupee ke image
+
+
+
+4 variables
+
+
+operation argument 1 argument 2 
+
+
+
+
+number ,  null
+
+operation  ,null
+
+generalize -------------
+
+
+
+argument 1  , operation , argument 2
+
+*
+
+
+handleoperation(argument 1 , arg 2 , operation)
+
+
+switch (operation)
+
+case: +
+
+return x+y;
+
+
+add mul div sub 
+
+
+x,y
+
+
+return x*y;
+return x-y;
+
+
+
+
+
++ - * / =
+
+
+
+
+
+jquey form validation
+watermark script
+mime types
+table hover karne wala
+
+
+
+
+
+
+
+user name email job experience resume upload resume.doc pdf file
+hobbies
+resumes folder main store aand also store in data base..insert query....
+
+

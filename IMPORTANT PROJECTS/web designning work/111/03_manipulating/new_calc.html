@@ -1,0 +1,232 @@
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title>Creating Automatic Bookmarks</title>
+    <script type="text/javascript" src="../jquery-1.3.2.js"></script>
+    <script type="text/javascript">
+        $("document").ready(function() { alert("ready"); });
+		
+		
+		function add()
+			{ if(($"#equal").val()==1)
+			{
+			alert("result");
+			}
+			
+			else {
+			z=$("#num1").val();
+			$("#num2").val('z');
+			
+			
+			
+			y=$("#num1").val('');
+		
+			op=$("#operation").val('+');
+			alert($("#operation").val());
+			}
+			}
+			
+			function sub()
+			{
+			
+			z=$("#num1").val();
+			$("#num2").val('z');
+			
+						
+			y=$("#num1").val(' ');
+			
+			op=$("#operation").val('-');
+			alert($("#operation").val());
+
+			}
+			function mul()
+			{
+			
+			z=$("#num1").val();
+			$("#num2").val('z');
+			
+			
+			
+			y=$("#num1").val(' ');
+			
+			op=$("#operation").val('*');
+			alert($("#operation").val());
+
+			}
+			function div()
+			{
+			
+			z=$("#num1").val();
+			$("#num2").val('z');
+			
+			
+			
+			y=$("#num1").val(' ');
+			
+			op=$("#operation").val('/');
+			alert($("#operation").val());
+
+			}
+		
+function equal(z,op,y)
+			{ alert($("#operation").val());
+		    alert(y);
+			$("#equal").val("1");
+			switch($("#operation").val())
+			{
+			case '+':
+			alert(parseInt(z)+parseInt(y));
+			$("#operation").val('');
+			break;
+			
+			case '-':
+			alert(parseInt(z)-parseInt(y));
+			$("#operation").val('');
+			break;
+			
+			case '*':
+			alert(parseInt(z)*parseInt(y));
+			$("#operation").val('');
+			break;
+			
+			case '/':
+			alert(parseInt(z)/parseInt(y));
+			$("#operation").val('');
+			break;
+			
+			case '':
+			alert("no operation");
+			break;
+			
+			
+			default: 
+			alert("none");
+			}
+					
+			}			
+			
+			function c()
+			{
+		
+			$("#num1").val(' ');
+			$("#num2").val(' ');
+			$("#operation").val(' ');
+			
+			}
+			
+			function one()
+			{
+			var num;
+			num=$("#num1").val();
+			y= num +1;
+			$("#num1").val(y);
+			}
+			function two()
+			{
+			var num;
+			num=$("#num1").val();
+		    y= num +2;
+			$("#num1").val(y);
+			}
+			function three()
+			{
+			var num;
+			num=$("#num1").val();
+			y= num +3;
+			$("#num1").val(y);
+			}
+			function four()
+			{
+			var num;
+			num=$("#num1").val();
+			y= num +4;
+			$("#num1").val(y);
+			}
+			function five()
+			{
+			var num;
+			num=$("#num1").val();
+		    y= num +5;
+			$("#num1").val(y);
+			}
+			function six()
+			{
+			var num;
+			num=$("#num1").val();
+			y= num +6;
+			$("#num1").val(y);
+			}
+			function seven()
+			{
+			var num;
+			num=$("#num1").val();
+			y= num +7;
+			$("#num1").val(y);
+			}
+			function eight()
+			{
+			var num;
+			num=$("#num1").val();
+			y= num +8;
+			$("#num1").val(y);
+			}
+			function nine()
+			{
+			var num;
+			num=$("#num1").val();
+			 y= num +9;
+			$("#num1").val(y);
+			}
+			function zero()
+			{
+			var num;
+			num=$("#num1").val();
+			y= num +0;
+			$("#num1").val(y);
+			}
+
+		
+		
+    </script>
+<style type="text/css">
+
+</style>
+
+	</head>
+
+<body>
+<div style="border: 1px solid grey; background-color:purple; width: 190px">
+		
+			<input id="num1" type="text" value=" " name="1" />
+			
+			<p id="num2" type="text" value=""></p>
+			<p id="operation" type="text" value=""></p>
+			
+			<input style="background-color:pink;-webkit-border-radius:30px;" type="button"  value="clear" onclick="c()"/>
+			<input style="background-color:pink;-webkit-border-radius:30px;" type="button"  value="refresh" onclick="r()"/>
+			<p>
+			<input style="background-color:pink;-webkit-border-radius:30px;" type="button"  value="1" onclick="one()"/>
+			<input style="background-color:pink;-webkit-border-radius:30px;" type="button"  value="2" onclick="two()"/>
+			<input style="background-color:pink;-webkit-border-radius:30px;" type="button"  value="3" onclick="three()"/>
+			<input style="background-color:pink;-webkit-border-radius:30px;" type="button"  value="4" onclick="four()"/>
+			<input style="background-color:pink;-webkit-border-radius:30px;" type="button"  value="+" onclick="add()"/>
+			</p>
+			<p>
+			<input style="background-color:pink;-webkit-border-radius:30px;" type="button"  value="5" onclick="five()"/>
+			<input style="background-color:pink;-webkit-border-radius:30px;" type="button"  value="6" onclick="six()"/>
+			<input style="background-color:pink;-webkit-border-radius:30px;" type="button"  value="7" onclick="seven()"/>
+			<input style="background-color:pink;-webkit-border-radius:30px;" type="button"  value="8" onclick="eight()"/>
+			<input style="background-color:pink;-webkit-border-radius:30px;" type="button"  value="-" onclick="sub()"/>
+			</p>
+			<p>
+			<input style="background-color:pink;-webkit-border-radius:30px;" type="button"  value="9" onclick="nine()"/>
+			<input style="background-color:pink;-webkit-border-radius:30px;" type="button"  value="0" onclick="zero()"/>
+			<input style="background-color:pink;-webkit-border-radius:30px;" type="button"  value="/" onclick="div()"/>
+			<input style="background-color:pink;-webkit-border-radius:30px;" type="button"  value="X" onclick="mul()"/>	
+			<input id="equal" style="background-color:pink;-webkit-border-radius:30px;" type="button"  value="=" onclick="equal(z,op,y)"/>
+			</p>
+			
+         </div>
+
+</body>
+
+</html>

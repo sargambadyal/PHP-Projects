@@ -1,0 +1,25 @@
+#back{
+background-image:url(matrix3.jpg);
+background-attachment:fixed;
+opacity:1;}
+
+#wrapper{
+margin: 0 auto;
+background-color:#000;
+opacity:.8;
+width:670px;
+height:5000px;
+-webkit-border-radius:30px;
+}
+.div1{
+float:left;width:300px; height:200px;
+}  
+.div3{
+float:left;width:210px; height:100px;
+}  
+
+.obj1{
+color:#abc;
+font-family:verdana;
+}
+	

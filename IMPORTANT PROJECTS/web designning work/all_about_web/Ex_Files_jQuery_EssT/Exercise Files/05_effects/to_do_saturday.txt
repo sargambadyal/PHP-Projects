@@ -1,0 +1,675 @@
+
+----------JQUERY UI----------
+
+javascript redirect
+
+
+PHP AND APACHE SERVER
+
+What is PHP?
+
+PHP stands for PHP: Hypertext Preprocessor
+PHP is a server-side scripting language, like ASP
+PHP scripts are executed on the server
+PHP supports many databases (MySQL, Informix, Oracle, Sybase, 
+Solid, PostgreSQL, Generic ODBC, etc.)
+PHP is an open source software
+PHP is free to download and use
+
+
+What is a PHP File?
+
+PHP files can contain text, HTML tags and scripts
+PHP files are returned to the browser as plain HTML 
+PHP files have a file extension of ".php" generally
+
+
+What is MySQL?
+
+MySQL is a database server
+MySQL is ideal for both small and large applications
+MySQL supports standard SQL
+MySQL compiles on a number of platforms
+MySQL is free to download and use
+
+PHP + MySQL
+
+PHP combined with MySQL are cross-platform (you can 
+develop in Windows and serve on a Unix platform)
+
+Why PHP?
+
+PHP runs on different platforms (Windows, Linux, Unix, etc.)
+PHP is compatible with almost all servers used today (Apache, IIS, etc.)
+PHP is FREE to download from the official PHP resource: www.php.net
+PHP is easy to learn and runs efficiently on the server side
+
+OPEN SOURCE 
+
+OPEN SOURCE AND FREE SOFTWARE DIFFERENCE???
+
+Where to Start?
+
+To get access to a web server with PHP support, you can:
+
+Install Apache (or IIS) on your own server, install PHP, and MySQL
+Or find a web hosting plan with PHP and MySQL support
+
+V.V. IMP:
+PHP code is executed on the server, and the plain HTML result is sent to the browser.
+
+
+Basic PHP Syntax
+
+A PHP scripting block always starts with <?php and ends with ?>. 
+
+A PHP scripting block can be placed anywhere in the document.
+
+On servers with shorthand support enabled you can start a scripting block with <? and end with ?>.
+
+BUT
+
+For maximum compatibility, we recommend that you use the standard form (<?php) rather than the shorthand form.
+
+
+
+--------------Some great PHP Stuff---------------
+Wordpress jommla drupal PHPBB
+
+<?php
+echo "Hello World";
+?>
+
+--------------------------------------Lets do an example------------------------------------------
+
+
+PHP echo and php hello world
+
+
+-------------------------Comments In PHP------------------------------
+
+//
+
+/*
+
+*/
+
+
+---------------------PHP VARIABLES--------------------------------------------
+
+
+A variable is used to store information.
+
+A variable starts with $
+
+loosely typed--------------------what is loosely  typed?
+
+example $mystring="Hellllo";
+
+
+In PHP, a variable does not need to be declared before adding a value to it
+
+PHP automatically converts the variable to the correct data type, depending on its value.
+
+In a strongly typed programming language, 
+you have to declare (define) the type and name 
+of the variable before using it.
+
+In PHP, the variable is declared automatically when you use it.
+
+
+
+Naming Rules for Variables
+
+A variable name must start with a letter or an underscore "_"
+A variable name can only contain alpha-numeric characters and underscores (a-z, A-Z, 0-9, and _ )
+A variable name should not contain spaces. If a variable name is more than one word, it should be separated 
+with an underscore ($my_string), or with capitalization ($myString)
+
+PHP STRINGS
+
+concatenation
+
+
+substr(string,start,length)
+
+strlen
+
+google for uppercase lower case etc etc
+
+all operators are valid like + - * / % etc etc 
+
+
+Conditional statements are used to perform different 
+actions based on different conditions.
+
+Conditional Statements
+
+Very often when you write code, 
+you want to perform different actions for different decisions.
+
+You can use conditional statements in your code to do this.
+
+In PHP we have the following conditional statements:
+
+if statement - use this 
+statement to execute some code only if a specified condition is true
+if...else statement - use 
+this statement to execute some code if a condition is true and another code if the condition is false
+if...elseif....else statement - use 
+this statement to select one of several blocks of code to be executed
+
+
+switch statement - use this statement to 
+select one of many blocks of code to be executed
+
+
+
+
+PHP Arrays 
+
+
+Simple arrays 
+
+like
+
+$marks=array();
+
+
+$marks[0]=100;$marks[1]="200";$marks[3]="300"
+
+count($array) gives total number of elememnts in array
+
+$marks[]=300
+
+//equal to $marks[4]=300
+
+
+//Assosiative Arrays
+
+//MVC FRAMEWORKS MODEL VIEW CONTROLLER CAKE PHP, ZEND, CODE IGNITER
+
+
+Associative Arrays
+
+An associative array, each ID key is associated with a value.
+
+When storing data about specific named values, 
+a numerical array is not always the best way to do it.
+
+With associative arrays we can use the
+values as keys and assign values to them.
+
+
+Example 1
+
+In this example we use an array to assign ages to the different persons:
+
+$ages = array("Peter"=>32, "Quagmire"=>30, "Joe"=>34);
+
+
+echo $ages["Peter"]
+
+
+$hogwarts=array(
+	$griffindore=>array("members"=>array("longbottom","harry","chota weasley","bada weasley") ,"captain"=>"Harry Potter",
+	"sunder_ladki"=>"Hermionie"),
+	$slyrherin=>array("bigdi_aulads"=>array("draco","maulfoy","snape"))
+);
+
+The function
+
+print_r
+
+print_r($hogwarts);
+
+Another example
+
+
+$families = array
+  (
+  "Griffin"=>array
+  (
+  "Peter",
+  "Lois",
+  "Megan"
+  ),
+  "Quagmire"=>array
+  (
+  "Glenn"
+  ),
+  "Brown"=>array
+  (
+  "Cleveland",
+  "Loretta",
+  "Junior"
+  )
+  );
+ 
+
+in_array(search,array)
+
+
+//in_array("pawan",$names)
+
+
+
+PHP while loop
+
+PHP for loop
+
+PHP Switch
+
+
+for in loop - javascript objects
+
+$marks=array(
+	"marks1"=>100,
+	"marks2"=>900,
+	"marks3"=>"fail"
+	);
+
+//for( x in obj)	
+	
+foreach($marks as $key=>$value):
+	echo $key." => ".$value;
+endforeach;
+
+
+<html>
+<body>
+
+<?php
+switch ($x)
+{
+case 1:
+  echo "Number 1";
+  break;
+case 2:
+  echo "Number 2";
+  break;
+case 3:
+  echo "Number 3";
+  break;
+default:
+  echo "No number between 1 and 3";
+}
+?>
+
+</body>
+</html>
+
+
+
+
+PHP foreach loop
+
+foreach($array_name as $key=>$value)
+
+
+
+avoiding {curly braces} in for if and foreach
+
+
+php alternative syntax
+
+
+
+
+
+PHP function example 
+
+
+$x
+
+function pizza($which_pizza){
+	echo $which_pizza;
+	echo $x;
+}
+
+pizza("Veg Doubles");
+
+global variable
+
+superglobals
+
+$GLOBALS
+$_SERVER
+$_GET
+$_POST
+$_FILES
+$_COOKIE
+$_SESSION
+$_REQUEST
+$_ENV
+
+
+
+
+<?php
+function test() {
+    $foo = "local variable";
+
+    echo '$foo in global scope: ' . $GLOBALS["foo"] . "\n";
+    echo '$foo in current scope: ' . $foo . "\n";
+}
+
+$foo = "Example content";
+test();
+?>
+
+
+
+can give default values for last parameters or optional parameters
+
+Taking User input
+
+
+User input should be validated on the browser whenever possible (by client scripts). Browser validation is faster and reduces the server load.
+
+You should consider server validation if the user input will be inserted into a database.
+ A good way to validate a form on the server is to post the form to itself, instead of jumping to a different page. 
+The user will then get the error messages on the same page as the form. \This makes it easier to discover the error
+
+$_GET
+
+$_POST
+
+query strings
+
+http_build_query
+
+<?php
+$data = array('foo'=>'bar',
+              'baz'=>'boom',
+              'cow'=>'milk',
+              'php'=>'hypertext processor');
+
+echo http_build_query($data) . "\n";
+echo http_build_query($data, '', '&amp;');
+
+?>
+
+
+
+$_GET
+
+$_POST
+
+examples.............
+difference................
+exercise.........do validation using jquery validation as well as back end and on same page submit
+
+----------Doing PHP File Upload--------------
+
+the enctype attribute...............
+The enctype attribute of the <form> tag specifies which content-type to use when submitting the form. 
+"multipart/form-data" is used when a form requires binary data, like the contents of a file, to be uploaded
+
+<html>
+<body>
+
+<form action="upload_file.php" method="post"
+enctype="multipart/form-data">
+<label for="file">Filename:</label>
+<input type="file" name="file" id="file" /> 
+<br />
+<input type="submit" name="submit" value="Submit" />
+</form>
+
+</body>
+</html>
+
+
+Note: Allowing users to upload files is a big security risk. 
+Only permit trusted users to perform file uploads
+
+
+
+By using the global PHP $_FILES array you can upload files from a client computer to the remote server.
+
+The first parameter is the form's input name and the second index can 
+be either "name", "type", "size", "tmp_name" or "error". Like this:
+
+$_FILES["file"]["name"] - the name of the uploaded file
+$_FILES["file"]["type"] - the type of the uploaded file
+$_FILES["file"]["size"] - the size in bytes of the uploaded file
+$_FILES["file"]["tmp_name"] - the name of the temporary copy of the file stored on the server
+$_FILES["file"]["error"] - the error code resulting from the file upload
+This is a very simple way of uploading files. 
+For security reasons, you should add restrictions on what the user is allowed to upload.
+
+
+Restrictions on Upload
+
+In this script we add some restrictions to the file upload. The user may only upload .gif or .jpeg files and the file size must be under 20 kb:
+
+<?php
+if ((($_FILES["file"]["type"] == "image/gif")
+|| ($_FILES["file"]["type"] == "image/jpeg")
+|| ($_FILES["file"]["type"] == "image/pjpeg"))
+&& ($_FILES["file"]["size"] < 20000))
+  {
+  if ($_FILES["file"]["error"] > 0)
+    {
+    echo "Return Code: " . $_FILES["file"]["error"] . "<br />";
+    }
+  else
+    {
+    echo "Upload: " . $_FILES["file"]["name"] . "<br />";
+    echo "Type: " . $_FILES["file"]["type"] . "<br />";
+    echo "Size: " . ($_FILES["file"]["size"] / 1024) . " Kb<br />";
+    echo "Temp file: " . $_FILES["file"]["tmp_name"] . "<br />";
+
+    if (file_exists("upload/" . $_FILES["file"]["name"]))
+      {
+      echo $_FILES["file"]["name"] . " already exists. ";
+      }
+    else
+      {
+      move_uploaded_file($_FILES["file"]["tmp_name"],
+      "upload/" . $_FILES["file"]["name"]);
+      echo "Stored in: " . "upload/" . $_FILES["file"]["name"];
+      }
+    }
+  }
+else
+  {
+  echo "Invalid file";
+  }
+?>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ 
+  
+  
+  
+  
+  
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

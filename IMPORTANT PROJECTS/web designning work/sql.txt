@@ -1,0 +1,421 @@
+//MYSQL_FETCH_ARRAY();
+The type of array that is to be fetched. 
+It's a constant and can take the 
+following values:
+
+MYSQL_ASSOC, 
+MYSQL_NUM, and 
+MYSQL_BOTH.
+
+include
+require
+
+Server Side Includes (SSI)
+
+You can insert the content of 
+one PHP file into another PHP file 
+before the server executes it, 
+with the include() or require() function.
+
+The two functions are 
+identical in every way,
+except how they handle errors:
+
+header
+menu slider
+body area 
+footer
+copyright
+
+
+include() 
+generates a warning, 
+but the script will continue execution
+
+require() 
+generates a fatal error, 
+and the script will stop
+
+<?php include('config.php') ?>
+
+Server side includes saves a lot of work. 
+This means that you can create 
+a standard header, footer, 
+or menu file for all your web pages. 
+When the header needs to be updated, 
+you can only update the include file, 
+or when you add a new page to your site, 
+you can simply change the menu file
+(instead of updating the links on 
+all your web pages).
+
+PHP include() Function
+
+The include() function takes all the 
+content in a specified file and includes
+it in the current file.
+
+If an error occurs, the include() 
+function generates a warning, 
+but the script will continue execution.
+
+Example 1
+
+Assume that you have a standard header file,
+called "header.php". 
+To include the header file in a page, 
+use the include() function:
+
+<html>
+<body>
+
+<?php include("header.php"); ?>
+<h1>Welcome to my home page!</h1>
+<p>Some text.</p>
+
+</body>
+</html>
+Example 2
+
+Assume we have a standard menu file, called "menu.php", that should be used on all pages:
+
+<a href="/default.php">Home</a>
+<a href="/tutorials.php">Tutorials</a>
+<a href="/references.php">References</a>
+<a href="/examples.php">Examples</a> 
+<a href="/about.php">About Us</a> 
+<a href="/contact.php">Contact Us</a>
+All pages in the Web site should include this menu file. Here is how it can be done:
+
+<html>
+<body>
+
+<div class="leftmenu">
+<?php include("menu.php"); ?>
+</div>
+
+<h1>Welcome to my home page.</h1>
+<p>Some text.</p>
+
+</body>
+</html>
+If you look at the source code 
+of the page above (in a browser), 
+it will look like this:
+
+<html>
+<body>
+
+
+
+
+<div class="leftmenu">
+<a href="/default.php">Home</a>
+<a href="/tutorials.php">Tutorials</a>
+<a href="/references.php">References</a>
+<a href="/examples.php">Examples</a> 
+<a href="/about.php">About Us</a> 
+<a href="/contact.php">Contact Us</a>
+</div>
+
+<h1>Welcome to my home page!</h1>
+<p>Some text.</p>
+
+</body>
+</html>
+
+PHP require() Function
+
+The require() function is
+identical to include(),
+except that it handles errors differently.
+
+If an error occurs, 
+the include() function generates a warning,
+but the script will continue execution. 
+The require() generates a fatal error, 
+and the script will stop.
+
+Error Example include() Function
+
+<html>
+<body>
+
+
+
+
+
+A cookie is often used to identify a user.
+
+What is a Cookie?
+
+
+
+A cookie is often 
+used to identify a user. 
+A cookie is a small file 
+that the server embeds on the user's computer. 
+Each time the same computer requests
+a page with a browser, it will send the cookie too.
+With PHP, you can both create and 
+retrieve cookie values.
+
+How to Create a Cookie?
+
+The setcookie()
+function is used to set a cookie.
+
+http headers 
+
+referrer
+server
+cookie
+location
+mydata
+
+content 
+
+<?php
+function(){
+
+}
+
+setcookie
+?>
+
+
+Note: The setcookie() function must 
+appear BEFORE the <html> tag.
+
+Syntax
+SESSION HIJACKING USING COOKIES
+
+OWASP
+
+setcookie(name, value, expire, path, domain);
+
+Example 1
+
+In the example below, we will create a 
+cookie named "user" and assign the value 
+"Alex Porter" to it. We also specify that
+the cookie should expire after one hour:
+
+<?php
+setcookie("user", "Harry Porter", time()+3600);
+?>
+
+<html>
+
+<!-- URL ENCODING -->
+......
+Note: The value of the cookie is 
+automatically URLencoded when sending the cookie,
+and automatically decoded when received
+(to prevent URLencoding, use setrawcookie() instead).
+
+Example 2
+
+You can also set the 
+expiration time of the cookie in another way. 
+It may be easier than using seconds.
+
+<?php
+$expire=time()+60*60*24*30;
+setcookie("user", "Alex Porter", $expire);
+
+
+setcookie(name,value,expire);
+
+
+?>
+
+<html>
+......
+In the example above the expiration time 
+is set to a month 
+(60 sec * 60 min * 24 hours * 30 days).
+
+How to Retrieve a Cookie Value?
+
+
+The PHP $_COOKIE variable is used to 
+retrieve a cookie value. 
+
+In the example below, we retrieve 
+the value of the cookie named "user" 
+and display it on a page:
+
+<?php
+// Print a cookie
+echo $_COOKIE["user"];
+
+// A way to view all cookies
+print_r($_COOKIE);
+?>
+In the following example we use the 
+isset() function to find out if a cookie has been set:
+
+<html>
+<body>
+
+<?php
+if (isset($_COOKIE["user"]))
+echo "Welcome " . $_COOKIE["user"] . "!<br />";
+else
+echo "Welcome guest!<br />";
+?>
+
+</body>
+</html>
+
+How to Delete a Cookie?
+
+When deleting a cookie you should
+assure that the expiration 
+date is in the past.
+
+Delete example:
+
+<?php
+// set the expiration date to one hour ago
+setcookie("user", "", time()-3600);
+?>
+
+
+
+
+//PHP SESSIONS
+
+UID---
+
+A PHP session variable is 
+used to store information about,
+or change settings for a user session.
+Session variables hold information about
+one single user, and are available to
+all pages in one application.
+
+
+
+PHP Session Variables
+
+When you are working with an application, 
+you open it, do some changes and 
+then you close it. 
+This is much like a Session. 
+The computer 
+knows who you are. 
+It knows when you start the 
+application and when you end. 
+But on the internet
+there is one problem: the web
+server does not
+know who you are and what you
+do because the
+HTTP address doesn't maintain
+state.
+
+A PHP session solves this problem by 
+allowing you to store user information on the
+server for later use 
+(i.e. username, shopping items, etc). However, session information is temporary and will be deleted after the user has left the website. If you need a permanent storage you may want to store the data in a database.
+
+Sessions work by creating a unique id (UID)
+for each visitor and store variables based 
+on this UID. The UID is either stored in a
+cookie or is propagated in the URL.
+
+Starting a PHP Session
+
+Before you can store user information
+in your PHP session, you must first start 
+up the session.
+
+<?php
+session_start();
+$_SESSION['myname']="myname"
+$mynames=array("name1","name2","name3");
+$_SESSION['mynames']=$mynames;
+?> 
+
+
+Note: The session_start() function 
+must appear BEFORE the <html> tag:
+
+<?php session_start(); ?>
+
+<html>
+<body>
+
+</body>
+</html>
+
+The code above will 
+register the user's session with the server, 
+allow you to start saving user information,
+and assign a UID for that user's session.
+
+Storing a Session Variable
+
+The correct way to store and retrieve session variables is to use the PHP $_SESSION variable:
+
+<?php
+session_start();
+// store session data
+$_SESSION['views']=1;
+?>
+
+<html>
+<body>
+
+<?php
+//retrieve session data
+echo "Pageviews=". $_SESSION['views'];
+?>
+
+</body>
+</html>
+Output:
+
+Pageviews=1
+In the example below, 
+we create a simple page-views counter. 
+The isset() function checks if the "views" 
+variable has already been set. 
+If "views" has been set, we can increment our counter. 
+If "views" doesn't exist, we create a "views" variable,
+and set it to 1:
+
+<?php
+session_start();
+
+if(isset($_SESSION['views']))
+$_SESSION['views']=$_SESSION['views']+1;
+else
+$_SESSION['views']=1;
+echo "Views=". $_SESSION['views'];
+?>
+
+Destroying a Session
+
+If you wish to delete some session data, 
+you can use the unset() or the session_destroy() 
+function.
+
+The unset() function is used to 
+free the specified session variable:
+
+<?php
+unset($_SESSION['views']);
+?>
+You can also completely
+destroy the session by calling the 
+session_destroy() function:
+
+<?php
+session_destroy();
+?>
+Note: session_destroy() will
+reset your session and you will lose 
+all your stored session data.

@@ -1,0 +1,213 @@
+<html>
+	<head>
+		<script type="text/javascript">
+			
+			function add()
+			{
+			var z=document.getElementById('num1').value;
+		    document.getElementById('num2').value=z;
+			document.getElementById('num1').value=" ";
+			document.getElementById('sum').value="1";
+			}
+			
+			function sub()
+			{
+			var z=document.getElementById('num1').value;
+		    document.getElementById('num2').value=z;
+			document.getElementById('num1').value=" ";
+			document.getElementById('sub').value="1";
+			}
+			
+			function mul()
+			{
+			var z=document.getElementById('num1').value;
+		    document.getElementById('num2').value=z;
+			document.getElementById('num1').value=" ";
+			document.getElementById('mul').value="1";
+			}
+			
+			function div()
+			{
+			var z=document.getElementById('num1').value;
+		    document.getElementById('num2').value=z;
+			document.getElementById('num1').value=" ";
+			document.getElementById('div').value="1";
+			}
+			
+			function equal()
+			{var z=document.getElementById('num2').value;
+			var y=document.getElementById('num1').value;
+		
+			if(document.getElementById('sum').value=="1")
+				{var answer=z+y;	
+				if(z=="" || y=="")
+					{
+					alert("incomplete input");
+				}
+				else
+				{
+				alert(parseInt(z)+parseInt(y));
+				document.getElementById('sum').value=" ";
+				}
+				}
+			else 
+		
+				if(document.getElementById('sub').value=="1")
+				{alert(parseInt(z)-parseInt(y));
+				document.getElementById('sub').value=" ";
+				}
+			
+				else
+					if(document.getElementById('mul').value=="1")
+					{alert(parseInt(z)*parseInt(y));
+					document.getElementById('mul').value=" ";
+					}
+					else
+						if(document.getElementById('div').value=="1")
+						{alert(parseInt(z)/parseInt(y));
+						document.getElementById('div').value=" ";
+						}
+						else
+						alert("wrong");
+						}
+			function r()
+			{
+			
+			if(document.getElementById('sum').value=="1")
+						{
+				document.getElementById('sum').value=" ";
+				}
+				
+			else 
+		
+				if(document.getElementById('sub').value=="1")
+				 {     
+				document.getElementById('sub').value=" ";
+				
+			
+			}
+				else
+					if(document.getElementById('mul').value=="1")
+					
+					document.getElementById('mul').value=" ";
+					
+					else
+						if(document.getElementById('div').value=="1")
+						
+						document.getElementById('div').value=" ";
+						
+						else
+						alert("NOT POSSIBLE");
+						
+			}			
+			
+			function c()
+			{
+			document.getElementById('num1').value=" ";
+			document.getElementById('num2').value=" ";
+			document.getElementById('sum').value==" ";
+			document.getElementById('sub').value==" ";
+			document.getElementById('mul').value==" ";
+			document.getElementById('div').value==" ";
+			}
+			
+			function one()
+			{
+			var num=document.getElementById('num1').value;
+			var y= num +1;
+			document.getElementById('num1').value= y;
+			}
+			function two()
+			{
+			var num=document.getElementById('num1').value;
+			var y= num +2;
+			document.getElementById('num1').value= y;
+			}
+			function three()
+			{
+			var num=document.getElementById('num1').value;
+			var y= num +3;
+			document.getElementById('num1').value= y;
+			}
+			function four()
+			{
+			var num=document.getElementById('num1').value;
+			var y= num +4;
+			document.getElementById('num1').value= y;
+			}
+			function five()
+			{
+			var num=document.getElementById('num1').value;
+			var y= num +5;
+			document.getElementById('num1').value= y;
+			}
+			function six()
+			{
+			var num=document.getElementById('num1').value;
+			var y= num +6;
+			document.getElementById('num1').value= y;
+			}
+			function seven()
+			{
+			var num=document.getElementById('num1').value;
+			var y= num +7;
+			document.getElementById('num1').value= y;
+			}
+			function eight()
+			{
+			var num=document.getElementById('num1').value;
+			var y= num +8;
+			document.getElementById('num1').value= y;
+			}
+			function nine()
+			{
+			var num=document.getElementById('num1').value;
+			var y= num +9;
+			document.getElementById('num1').value= y;
+			}
+			function zero()
+			{
+			var num=document.getElementById('num1').value;
+			var y= num +0;
+			document.getElementById('num1').value= y;
+			}
+
+		</script>
+	</head>
+		<body>
+		<div style="border: 1px solid grey; width: 190px">
+		
+			<input id="num1" type="text" value=" " name="1" />
+			
+			<p id="num2" type="text" value=""></p>
+			<p id="sub" type="text" value=""></p>
+			<p id="sum" type="text" value=""></p>
+			<p id="mul" type="text" value=""></p>
+			<p id="div" type="text" value=""></p>
+			<input type="button"  value="clear" onclick="c()"/>
+			<input type="button"  value="refresh" onclick="r()"/>
+			<p>
+			<input type="button"  value="1" onclick="one()"/>
+			<input type="button"  value="2" onclick="two()"/>
+			<input type="button"  value="3" onclick="three()"/>
+			<input type="button"  value="4" onclick="four()"/>
+			<input type="button"  value="+" onclick="add()"/>
+			</p>
+			<p>
+			<input style="background-color:red" type="button"  value="5" onclick="five()"/>
+			<input type="button"  value="6" onclick="six()"/>
+			<input type="button"  value="7" onclick="seven()"/>
+			<input type="button"  value="8" onclick="eight()"/>
+			<input type="button"  value="-" onclick="sub()"/>
+			</p>
+			<p>
+			<input type="button"  value="9" onclick="nine()"/>
+			<input type="button"  value="0" onclick="zero()"/>
+			<input type="button"  value="/" onclick="div()"/>
+			<input type="button"  value="X" onclick="mul()"/>	
+			<input type="button"  value="=" onclick="equal()"/>
+			</p>
+			
+         </div>
+		</body> 
+</html>			

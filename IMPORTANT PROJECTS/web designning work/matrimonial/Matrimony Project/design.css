@@ -1,0 +1,13 @@
+#back{
+background-image:url(faltu.jpg);
+opacity:1;}
+
+#wrapper{
+margin: 0 auto;
+text-align:center;
+background-color:#fff;
+opacity:.7;
+width:900px;
+height:600px;
+-webkit-border-radius:30px;
+}

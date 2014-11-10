@@ -1,0 +1,539 @@
+What is AJAX?
+
+AJAX = Asynchronous JavaScript and XML.
+
+AJAX is a technique
+ for creating fast and dynamic web pages.
+
+AJAX allows web pages to be updated 
+asynchronously 
+by exchanging small amounts 
+of data with the server behind 
+the scenes.
+ This means that it is possible to update parts
+ of a web page, without reloading the whole page.
+
+Classic web pages, (which do not use AJAX) 
+must reload the entire page 
+if the content should change.
+
+Examples of applications using AJAX: 
+Google Maps, Gmail, Youtube, and Facebook tabs.
+
+
+-----GOOGLE GOOGLE SUGGEST
+
+---GWT google web toolkit java 
+coding change javascript
+----java to javascript compiler
+
+AJAX is Based on Internet Standards
+
+AJAX is based on internet standards, 
+and uses a combination of:
+
+XMLHttpRequest object (to exchange
+ data asynchronously with a server)
+ 
+XHR 
+ 
+JavaScript/DOM (to display/interact 
+with the information)
+
+CSS (to style the data)
+
+XML (often used as the format for transferring data)
+ 
+AJAX applications 
+are browser- and platform-independent!
+  
+  
+----------------------KEY CONCEPTS IN AJAX------------------------
+The keystone of AJAX is the XMLHttpRequest object.
+
+The XMLHttpRequest Object
+
+All modern browsers support the
+ XMLHttpRequest object
+ (IE5 and IE6 uses an ActiveXObject).
+
+The XMLHttpRequest object is used to exchange data
+ with a server behind the scenes. 
+ This means that it
+ is possible to update parts of a web page,
+ without reloading the whole page.
+
+Create an XMLHttpRequest Object
+
+All modern browsers (IE7+, Firefox, Chrome, Safari, and Opera) have a built-in XMLHttpRequest object.
+
+Syntax for creating an XMLHttpRequest object:
+
+var xhr=new XMLHttpRequest();
+Old versions of Internet Explorer (IE5 and IE6)
+ uses an ActiveX Object:
+
+var xhr=new ActiveXObject("Microsoft.XMLHTTP");
+
+To handle all modern browsers, 
+including IE5 and IE6,
+ check if the browser supports the 
+ XMLHttpRequest object. 
+ If it does, create an 
+ XMLHttpRequest object, 
+ if not, create an ActiveXObject:
+
+Example
+
+var xmlhttp;
+
+if (window.XMLHttpRequest)
+  {// code for IE7+, Firefox, Chrome, Opera, Safari
+  xmlhttp=new XMLHttpRequest();
+  }
+else
+  {// code for IE6, IE5
+  xmlhttp=new ActiveXObject("Microsoft.XMLHTTP");
+  }
+  
+The XMLHttpRequest object 
+is used to exchange data with a server.
+
+------------------------Send a Request To a Server--------------------
+
+To send a request to a server,
+ we use the open() and send() 
+ methods of the XMLHttpRequest object:
+
+xmlhttp 
+ 
+xmlhttp.open("GET","delete.php?id=4",true);
+
+xmlhttp.send();
+
+Method	Description
+open(method,url,async)	
+
+Specifies the type of request, the URL, and 
+if the request should be handled asynchronously or not.
+
+method: the type of request: GET or POST
+url: the location of the file on the server
+async: true (asynchronous) or false (synchronous)
+
+send(string)	
+Sends the request off to the server.
+
+string: Only used for POST requests
+  
+
+---------------POST EXAMPLE---------------------------
+
+xmlhttp.open("POST","ajax_test.asp",true);
+xmlhttp.setRequestHeader("Content-type","application/x-www-form-urlencoded");
+xmlhttp.send("fname=Henry&lname=Ford");
+  
+------------------------------------------------------  
+
+//Setting Header And More  
+//header("Location : script.php");
+//header("FALANADATA: falaneformat");
+
+
+  
+  
+-------------------------RESPONSE-------------------------  
+Server Response
+
+To get the response from a server,
+ use the responseText or 
+ responseXML property of 
+ the XMLHttpRequest object.
+
+Property	Description
+responseText	
+get the response data as a string
+responseXML	   
+get the response data as XML data
+
+The responseText Property
+
+If the response from the server 
+is not XML, use the responseText property.
+
+The responseText property 
+returns the response as a string, and you can use it accordingly:
+
+Example
+
+document.getElementById("myDiv").innerHTML=xmlhttp.responseText;
+
+-----4 states states assosiate message codes--
+
+------------------------
+-----------onreadystatechangevent----------------------------------------------------------------------  
+The onreadystatechange event
+
+When a request to a server is sent, 
+we want to perform some actions 
+based on the response.
+
+The onreadystatechange event
+ is triggered every time the 
+ readyState changes.
+
+The readyState property 
+holds the status of the XMLHttpRequest.
+
+Three important properties 
+of the XMLHttpRequest object:
+
+Property	Description
+onreadystatechange	Stores a function (or the name of a function) to be called automatically each time the readyState property changes
+readyState	Holds the status of the XMLHttpRequest. Changes from 0 to 4: 
+0: request not initialized 
+1: server connection established
+2: request received 
+3: processing request 
+4: request finished and response is ready
+status	200: "OK"
+404: Page not found
+In the onreadystatechange event, we specify what will happen when the server response is ready to be processed.
+
+When readyState is 4 and status is 200, the response is ready:  
+  
+  
+  
+  
+ ------------------example with php--------------- 
+  
+  
+  
+<html>
+<head>
+<script type="text/javascript">
+function callajax()
+{
+
+if (window.XMLHttpRequest)
+  {
+  // code for IE7+, Firefox, Chrome, Opera, Safari
+  xmlhttp=new XMLHttpRequest();
+  }
+else
+  {
+  // code for IE6, IE5
+  xmlhttp=new ActiveXObject("Microsoft.XMLHTTP");
+  }
+  
+xmlhttp.onreadystatechange=function()
+  {
+  if (xmlhttp.readyState==4 && xmlhttp.status==200)
+    {
+    alert(xmlhttp.responseText);
+    }
+  }
+xmlhttp.open("GET","gethint.php?q="+str,true);
+xmlhttp.send();
+}
+</script>
+</head>
+<body>
+
+<p><b>Start typing a name in the input field below:</b></p>
+<form> 
+First name: <input type="text" onkeyup="callajax()" size="20" />
+</form>
+<p>Suggestions: <span id="txtHint"></span></p>
+
+</body>  
+
+  
+  
+--------------JQUERY AGAIN SHOWS ITS MAGiC HERE------------
+
+AJAX and jQuery
+
+jQuery provides a rich set of 
+methods for AJAX web development.
+
+With jQuery AJAX, you can request 
+TXT, HTML, XML or JSON data 
+from a remote server using both
+ HTTP Get and HTTP Post.
+
+And you can load remote data
+ directly into selected HTML
+ elements of your web page!  
+  
+  
+----------------------------------Write Less,
+ Do More
+
+The jQuery load() method is a simple 
+(but very powerful)
+ AJAX function. It has the following syntax:
+
+$(selector).load(url,data,callback)
+
+
+	
+Example:
+
+
+$(document).ready(function(){
+  $("button").click(function(){
+    $("#mydiv").load('test1.txt');
+  });
+});
+</script>
+
+
+Use the selector to define the HTML 
+element(s) to change, and
+
+ the url parameter to specify a web 
+ address for your data.  
+  
+
+Only if you want to send data to the server, 
+you need to use the data parameter. 
+Only if you need to 
+trigger a function after completion, 
+you will use the callback parameter.
+
+
+------------JQUERY GET------------------
+
+$("button").click(function(){
+  $.get("demo_ajax_load.php", function(result){
+    $("#mydiv").html(result);
+  });
+});
+
+$.get(url,data,success
+(response,status,xhr),dataType)
+
+
+
+url	Required. 
+Specifies the url to send the request to
+data	Optional. 
+Specifies data to send to the server along 
+with the request
+success(response,status,xhr)	 
+Optional. Specifies the function 
+to run if the request succeeds
+
+Additional parameters:
+response - 
+contains the result data from the request
+
+status - 
+contains the status of the request 
+("success", "notmodified", "error", "timeout",
+ or "parsererror")
+
+ xhr - contains the XMLHttpRequest object
+ 
+ dataType	 Optional. 
+
+ Specifies the data type expected of 
+ the server response.
+
+ By default jQuery performs an automatic guess.
+Possible types:
+"xml" - An XML document
+"html" - HTML as plain text
+"text" - A plain text string
+"script" - Runs the response as JavaScript, and returns it as plain text
+"json" - Runs the response as JSON, and returns a JavaScript object
+"jsonp" - Loads in a JSON block using JSONP. Will add an "?callback=?" to the URL to specify the callback
+
+
+
+----------JQUERY PARAM--------
+
+<script type="text/javascript">
+$(document).ready(function(){
+  personObj=new Object();
+  personObj.firstname="John";
+  personObj.lastname="Doe";
+  personObj.age=50;
+  personObj.eyecolor="blue"; 
+ 
+  $("button").click(function(){
+    $("div").text($.param(personObj));
+  });
+});
+</script>
+
+
+
+---------JQUERY POST------------
+
+$.post(url,data,success
+(response,status,xhr),dataType)
+
+
+<script type="text/javascript">
+$(document).ready(function(){
+  $("input").keyup(function(){
+    txt=$("input").val();
+    $.post("demo_ajax_gethint.php",{suggest:txt},function(result){
+      $("span").html(result);
+    });
+  });
+});
+</script>
+
+
+url	Required. Specifies the url to send the request to
+data	Optional. Specifies data to send to the server along with the request
+success(response,status,xhr)	 Optional. Specifies the function to run if the request succeeds
+Additional parameters:
+response - contains the result data from the request
+status - contains the status of the request ("success", "notmodified", "error", "timeout", or "parsererror")
+xhr - contains the XMLHttpRequest object
+dataType	 Optional. Specifies the data type expected of the server response.
+By default jQuery performs an automatic guess.
+Possible types:
+"xml" - An XML document
+"html" - HTML as plain text
+"text" - A plain text string
+"script" - Runs the response as JavaScript, and returns it as plain text
+"json" - Runs the response as JSON, and returns a JavaScript object
+"jsonp" - Loads in a JSON block using JSONP. Will add an "?callback=?" to the URL to specify the callback
+
+
+
+
+
+
+----SERIALIZE------
+
+Encode a set of form elements as a string for submission.
+
+var post_data = $("#myform").serialize();
+$.post(post_url, post_data, function(data){
+
+});
+
+
+
+
+-------CAPTCHA---------------
+ <img id="captcha" 
+ src="securimage/securimage_show.php" 
+ alt="CAPTCHA Image" style="border: 3px solid black;" /><br/>
+
+
+ include_once 'securimage/securimage.php';
+
+$securimage = new Securimage();
+
+check method of securimage object returns captcha
+
+if ($securimage->check($_POST['captcha_code'])
+
+
+-----------------ASSIGNMENT RECAPTCHA STUDY-------------------
+
+
+
+
+-----------CURL----------------
+
+	function sendmessage($mobile,$message){
+	
+	$ch = curl_init();
+
+
+	$username="badyalsargam";
+	//$password="8870698010";
+	$password="lbghut36sh";
+
+	"<?xml version='1.0' encoding='utf-8'?>
+	<MESSAGE>
+	<USER USERNAME='$username' PASSWORD='$password'/>
+	<SMS TEXT='$message' MESGTYPE='' SENDER='TEST' PRIORITY='1' >
+	<ADDRESS TO='$mobile' />
+	</SMS>
+	</MESSAGE>";
+
+	$data=urlencode($data)
+
+	$url="http://bulksms.gateway4sms.com/xmlapi.php?data=$data";
+	
+	$url="http://www.google.com"
+
+	curl_setopt($ch, CURLOPT_URL,$url);
+
+	curl_setopt($ch, CURLOPT_RETURNTRANSFER, 1);
+
+	$contents = curl_exec ($ch);
+
+	echo $contents;
+	
+	curl_close ($ch);
+	
+
+
+	if(substr($contents,0,5)=="alert"):
+		return true;
+	else:
+		return false;
+	endif;
+	}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

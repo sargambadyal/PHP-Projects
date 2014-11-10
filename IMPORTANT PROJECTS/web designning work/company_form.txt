@@ -1,0 +1,35 @@
+<html>
+
+ <head>
+
+  <title>company</title>
+  
+    
+ </head>
+
+   <body style="background-image:url(back.jpg);opacity:1">
+
+   
+<div id="wrapper" style="margin: 0 auto;background-color:#fff;opacity:.6;width:900px;height:600px;-webkit-border-radius:30px;">
+
+	<div style="float:left;width:150px; height:100px">
+		<img style="width:150px;height:100px" src="logo.jpg"/>
+	</div>
+	<div style="float:left;width:250px; height:80px; font-size:14px; background-color:#000;color:#fff;-webkit-border-radius:30px;-webkit-box-shadow:5px 5px 5px #000">
+		<h1><center><a style="text-decoration:none;color:#fff" href="#">HOME</a></center></h1>
+	</div>
+	<div style="float:left;width:250px; height:80px; font-size:14px; background-color:#000; color:#fff;-webkit-border-radius:30px;-webkit-box-shadow:5px 5px 5px #000">
+		<h1 style="text-align:center"><a style="text-decoration:none;color:#fff" href="file:///C:/Users/sargam/Desktop/web%20designning%20work/company_mission.html#">MISSION</a></h1>
+	</div>
+	<div style="float:left;width:250px; height:80px;font-size:14px; background-color:#000; color:#fff;-webkit-border-radius:30px;-webkit-box-shadow:5px 5px 5px #000">
+		<h1><center><a style="text-decoration:none;color:#fff" href="comp_home.html">JOB FORM</a></center></h1>
+	</div>
+	<div>
+	<h1 style="text-align:center;font-family:curlz mt;font-size:50px;color:#f00">     REWritE BeautiFuL       </h1>
+	</div>
+	
+
+
+    </body>
+
+</html>

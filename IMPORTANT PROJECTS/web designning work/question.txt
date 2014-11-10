@@ -1,0 +1,31 @@
+Your Question :
+
+1.Make a website about a company.
+2.Make a page where users sign up , use captcha
+3. When users sign up a mail is sent to their emailid , with a link clicking on which they 
+are confirmed for sign up process and process goes for admin aprooval
+4.In admin panel accessible via admin username and password admin should be able to approve users 
+or disapprove users , he should also be able to edit details of existing users and delete them.He 
+should also be able to add new admins for managing this task.
+5.After user is approved he should be able to upload his resume and his photo to his profile.
+
+
+----Notes-----
+1. Use both frontend and backend validation for forms and website 
+should be free of any xsrf , injection attacks
+2. Make your website SEO
+
+
+
+For any queries ping me on fb or call me
+
+ function filterinput($input){
+ $input=mysql_real_escape_string($input);
+ $input=htmlspecialchars($input);
+ $input=stripslashes($input);
+ }
+
+ $username=md5(filterinput($_POST['username']));
+ ck editor ....\\\
+
+prepared statements
